@@ -1,0 +1,55 @@
+
+/*main part*/
+.container{
+ 	  margin-left: auto;
+	  margin-right: auto;
+  	  width:70%;
+}
+
+/* buttons */
+
+.white_color{
+	background-color: Dodgerblue;
+	padding-left:  200px;
+}
+
+/* Style buttons */
+.btn {
+
+  background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/images/resources/icons/colorless.png");
+  border: none; /* Remove borders */
+  color: black; /* White text */
+  padding: 3px 10px 5px 2px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  margin-left: 5px;
+ /* cursor: pointer;  Mouse pointer on hover */
+}
+
+
+/* heading */
+.black_color{
+	background-color: Black;
+	text-align: center;
+	color: #f7d92e;
+	font-size: 16px;
+}	
+.experiment{
+	height: 500px;
+	width: 100%;
+}
+.trapezoid{
+	
+}
+
+/* start expertipent */
+.grey_color{
+	background-color:#808080;
+	text-align: center;
+	color: White;
+	font-size: 20px;
+}
+/*buttons and checkbox */
+.whitesmoke_color{
+	background-color: 	#F5F5F5;
+	padding-left:  50px;
+}
