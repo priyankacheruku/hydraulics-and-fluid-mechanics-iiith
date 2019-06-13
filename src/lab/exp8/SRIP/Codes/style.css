@@ -111,7 +111,7 @@
 .box__face--back   {  background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/382.jpg"); }
 .box__face--left   { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/378.jpg"); }
 .box__face--top    { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/376.jpg");  }
-.box__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
+.box__face--bottom { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/tile.jpg");}
 
 .box__face--front  { transform: rotateY(  0deg) translateZ( 50px); }
 .box__face--back   { transform: rotateY(180deg) translateZ( 50px); }
