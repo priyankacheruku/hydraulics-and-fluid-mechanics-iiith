@@ -46,6 +46,7 @@
 .scene {
   width: 200px;
   height: 200px;
+  
  /* border: 1px solid #CCC;
   margin: 80px;*/
   perspective: 400px;
@@ -75,16 +76,15 @@
   height: 200px;
   border: 2px solid black;
   line-height: 200px;
-  font-size: 40px;
+  /*font-size: 40px;
   font-weight: bold;
   color: white;
-  text-align: center;
+  text-align: center;*/
 }
 
 
 /*adding images */
 
-.cube__face--front  { background: hsla(  0, 100%, 50%, 0.7); }
 .cube__face--right  { 
 	background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/378.jpg"); }
 .cube__face--back   { 
