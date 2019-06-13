@@ -107,9 +107,9 @@
 }
 
 
-.box__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
-.box__face--back   { background: hsla(120, 100%, 50%, 0.7); }
-.box__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+.box__face--right  { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/378.jpg"); }
+.box__face--back   {  background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/382.jpg"); }
+.box__face--left   { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/378.jpg"); }
 .box__face--top    { background: hsla(240, 100%, 50%, 0.7); }
 .box__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
 
