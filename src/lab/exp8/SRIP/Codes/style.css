@@ -44,62 +44,83 @@
 
 
 .scene {
-  width: 200px;
-  height: 200px;
-  
- /* border: 1px solid #CCC;
-  margin: 80px;*/
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  margin-left: : 150px;
   perspective: 400px;
 }
 
-.cube {
-  width: 200px;
-  height: 200px;
+.box {
+  width: 100%;
+  height: 100%;
   position: relative;
-  transform-style: preserve-3d;
-  transform: translateZ(-100px);
+ 
+  
 }
 
+.box.show-front  { transform: translateZ( -50px) rotateY(   0deg); }
+.box.show-back   { transform: translateZ( -50px) rotateY(-180deg); }
+.box.show-right  { transform: translateZ(-150px) rotateY( -90deg); }
+.box.show-left   { transform: translateZ(-150px) rotateY(  90deg); }
+.box.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+.box.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
 
 
-.cube__face {
+.box__face {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 2px solid black;
-  line-height: 200px;
-  /*font-size: 40px;
-  font-weight: bold;
-  color: white;
-  text-align: center;*/
+ 
+}
+
+.box__face--front,
+.box__face--back {
+  width: 600px;
+  height: 400px;
+  left: 100px;
+}
+
+.box__face--right{
+  width: 100px;
+  height: 400px;
+  left: 500px;
+}
+.box__face--left {
+  width: 100px;
+  height: 400px;
+  left:200px;
+  
+}
+
+.box__face--top
+{
+  width: 600px;
+  height: 100px;
+  top: 50px;
+  left: 100px;
+  
+}
+.box__face--bottom {
+  width: 600px;
+  height: 100px;
+  top: 250px;
+  left: 100px;
 }
 
 
-/*adding images */
+.box__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
+.box__face--back   { background: hsla(120, 100%, 50%, 0.7); }
+.box__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+.box__face--top    { background: hsla(240, 100%, 50%, 0.7); }
+.box__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
 
-.cube__face--right  { 
-	background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/378.jpg"); }
-.cube__face--back   { 
-	 background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/382.jpg");}
-.cube__face--left   { 
- background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/378.jpg");}
-.cube__face--top    { 
-	background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/376.jpg"); }
-.cube__face--bottom { 
-	background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/tile.jpg"); }
+.box__face--front  { transform: rotateY(  0deg) translateZ( 50px); }
+.box__face--back   { transform: rotateY(180deg) translateZ( 50px); }
 
-.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
-.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
-.cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
-.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
-.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
-.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+.box__face--right  { transform: rotateY( 90deg) translateZ(150px); }
+.box__face--left   { transform: rotateY(-90deg) translateZ(150px); }
 
-.cube.is-backface-hidden .cube__face {
-  backface-visibility: hidden;
-}
-
-
+.box__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+.box__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
 
 
 
