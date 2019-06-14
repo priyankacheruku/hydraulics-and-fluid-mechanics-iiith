@@ -1,4 +1,5 @@
-function myFunction() {
+function checkbox() {
+	//alert("js");
   var checkBox = document.getElementById("myCheck");
   var text = document.getElementById("text");
   if (checkBox.checked == true){
