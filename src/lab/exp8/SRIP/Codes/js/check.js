@@ -22,6 +22,16 @@ function checkbox() {
       }
 
   //height
+     var height = document.getElementById("Height");
+      var height_output= document.getElementById("Height_output");
+      height_output.innerHTML = height.value;
+
+      height.oninput = function() {
+          
+          height_output.innerHTML = this.value;
+          var height_value=this.value;
+          //alert(length_value);
+      }
 
 
 
