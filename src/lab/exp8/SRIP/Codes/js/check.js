@@ -1,7 +1,7 @@
 function checkbox() {
 	//alert("js");
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
+  var checkBox = document.getElementById("inputParameter");
+  var text = document.getElementById("parameters");
   if (checkBox.checked == true){
     text.style.display = "block";
   } else {
