@@ -46,6 +46,16 @@ function checkbox() {
           //alert(length_value);
       }
     //area
+      var area  = document.getElementById("Area");
+      var area_output= document.getElementById("Area_output");
+      area_output.innerHTML = area.value;
+
+      area.oninput = function() {
+          
+          area_output.innerHTML = this.value;
+          var area_value=this.value;
+          //alert(length_value);
+      }
 
 
 
