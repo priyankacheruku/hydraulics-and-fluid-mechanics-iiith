@@ -1,4 +1,6 @@
+@import url('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css');
 
+@import url("parameter.css");
 /*main part*/
 .container{
  	  margin-left: auto;
