@@ -3,20 +3,32 @@ function checkbox() {
   var checkBox = document.getElementById("inputParameter");
   var text = document.getElementById("parameters");
   if (checkBox.checked == true){
+
+
+
     text.style.display = "block";
 
-    var slider = document.getElementById("myRange");
-	var output = document.getElementById("demo");
-	output.innerHTML = slider.value;
 
-	slider.oninput = function() {
-  	output.innerHTML = this.value;
-}
+//length
+      var length = document.getElementById("Length");
+      var length_output= document.getElementById("Length_output");
+      length_output.innerHTML = length.value;
+
+      length.oninput = function() {
+          //alert("js");
+          length_output.innerHTML = this.value;
+          var length_value=this.value;
+          //alert(length_value);
+      }
+
+  //height
 
 
 
 
-  } else {
+  } 
+
+  else {
      text.style.display = "none";
   }
 }
