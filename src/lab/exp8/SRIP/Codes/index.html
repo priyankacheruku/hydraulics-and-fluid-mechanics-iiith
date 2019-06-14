@@ -5,12 +5,15 @@
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<script type="text/javascript" src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Codes/script.js"></script>
+	<script type="text/javascript" src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Codes/js/check.js"></script>
 </head>
 <body>
 
 
 <div class="container">
+
+
+
 
 
 <!-- buttons above -->
@@ -38,8 +41,6 @@
 		</button>
 	</div>
 
-	
-
 
 
 
@@ -66,29 +67,53 @@
 <!--experiment div ended now further instruction-->
 	<div class="grey_color">
 		*start the experiment.
-	</div>
+	</div>		<!-- buttons below -->
 
 
 
-		<!-- buttons below -->
+
+
+
+
+
+
+	
 	<div class="whitesmoke_color">
+
+
+			<div >
 			<button class="btn" name="h-view">
 				<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/h-view.png">
 				Horizontal View
 			</button>
+
+
 			<button class="btn" name="v-view">
 				<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/v-view.png">
 				Vertical View
 			</button>
-
-			<input type="checkbox" name="in"><img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/tasklist.png">
-			<span >Show input Parameters </span></input>
+			</div>
 
 
-			<input type="checkbox" name="show_graph"><img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/show_graph.png">
-			<span >Show Graphs</span></input>
+		
+			<div  style="display: inline-block; position: absolute;">
+		
+					<input type="checkbox" name="inputParameter" onclick="checkbox()">
+					<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/tasklist.png">
+					Show input Parameters 
+	
+			
+
+					<input type="checkbox" name="show_graph" onclick="checkbox()">
+					<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/show_graph.png">
+					<span >Show Graphs</span>
+		
+			</div>
 	</div>
-
+	<div>
+		<!--for input parameters" -->
+		<p id="text" style="display:none">Checkbox is CHECKED!</p>
+	</div>
 
 
 </div>
