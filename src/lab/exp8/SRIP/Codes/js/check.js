@@ -34,6 +34,19 @@ function checkbox() {
       }
 
 
+    //cofficient of discharge
+      var cd = document.getElementById("cd");
+      var cd_output= document.getElementById("cd_output");
+      cd_output.innerHTML = cd.value;
+
+      cd.oninput = function() {
+          
+          cd_output.innerHTML = this.value;
+          var cd_value=this.value;
+          //alert(length_value);
+      }
+    //area
+
 
 
   } 
