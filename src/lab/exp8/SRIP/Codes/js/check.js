@@ -56,12 +56,17 @@ function checkbox() {
           var area_value=this.value;
           //alert(length_value);
       }
-
-
-
-  } 
+  }//if closing for input parameters 
 
   else {
      text.style.display = "none";
   }
+
+  
+  var checkBox2 = document.getElementById("show_graph");
+  if (checkBox2.checked == true){
+    alert("as");
+  }
+
+  
 }
