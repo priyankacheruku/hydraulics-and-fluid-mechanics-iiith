@@ -102,9 +102,7 @@ function show(){
        //alert(2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2)));
        //alert(q);2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2))
        var q=parseInt(2/3*c*l*Math.pow(h,(3/2)));
-       document.getElementById("q_value").innerHTML = "q value without velocity";
-       //var qV =
-
-
-
+       
+       var qV =q/a;
+       document.getElementById("q_value").innerHTML = "q value without velocity"+q+"<br> q value with velocity is "+qV;
 }
