@@ -95,14 +95,15 @@ function show(){
        var c=parseInt(inputValues.cof);
        var a=parseInt(inputValues.are);
        
-       //(2/3)*cd*l*sqrt((2*g))*(h^(3/2))
+       //(2/3)*cd*l*(h^(3/2))
        //g is  9.8
 
        //var q =(2/3)* parseInt(inputValues.cof)*parseInt(inputValues.length)*Math.sqrt(2*9.8)*parseInt(inputValues.hei);
        //alert(2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2)));
        //alert(q);2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2))
-       var q=parseInt(2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2)));
-       document.getElementById("q_value").innerHTML = q;
+       var q=parseInt(2/3*c*l*Math.pow(h,(3/2)));
+       document.getElementById("q_value").innerHTML = "q value without velocity";
+       //var qV =
 
 
 
