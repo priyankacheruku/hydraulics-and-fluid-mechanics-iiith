@@ -91,18 +91,26 @@ function show(){
        //"RESULT without velocity is ";
        //alert("sa");
        var l=parseInt(inputValues.len);
-       var h=parseInt(inputValues.hei);
-       var c=parseInt(inputValues.cof);
+       var h=parseFloat(inputValues.hei);
+       var c=parseFloat(inputValues.cof);
        var a=parseInt(inputValues.are);
-       
-       //(2/3)*cd*l*(h^(3/2))
+       //q=2/3 * c * l * sqrt (2g) * h ^ 2/3 
+       //q=(1.71*cd*l*(h^(3/2))
+
+       //v=q/a
+       //hv=v^2/2*g
        //g is  9.8
+       //h1=h+hv
+       //qv=1.71*cd*l(h1^(3/2)-hv^(3/2))
 
        //var q =(2/3)* parseInt(inputValues.cof)*parseInt(inputValues.length)*Math.sqrt(2*9.8)*parseInt(inputValues.hei);
        //alert(2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2)));
        //alert(q);2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2))
-       var q=parseInt(2/3*c*l*Math.pow(h,(3/2)));
+       var q=parseFloat(1.71*c*l*Math.pow(h,(3/2)));
        
-       var qV =q/a;
-       document.getElementById("q_value").innerHTML = "q value without velocity"+q+"<br> q value with velocity is "+qV;
+       var V =q/a;
+       var hv= Math.pow(V,2)/(2*9.8);
+       var h1=h+hv;
+       var qv=1.71*c*l*(Math.pow(h1,3/2)-Math.pow(hv,3/2))
+       document.getElementById("q_value").innerHTML = "q value without velocity"+q+"<br> q value with velocity is "+qv;
 }
