@@ -7,10 +7,13 @@
 	<script type="text/javascript" src="Codes/js/three.js"></script>
 	<script type="text/javascript" src="Codes/js/three.min.js"></script>
 	<script type="text/javascript" src="Codes/js/three.module.js"></script>
+	<!--canvasjs libraries-->
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Codes/js/check.js"></script>
+	<script type="text/javascript" src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Codes/js/check2.js"></script>
 </head>
 <body>
 
@@ -58,8 +61,39 @@
     					<div class="box__face box__face--front"></div>
     					<div class="box__face box__face--back">
 
-    						
-    					</div>
+<br><br>
+
+ <div style="display: inline-block; padding-left:0px;">
+<svg height="100" width="112">
+  <polygon points="11 96,111 94,108 50,73 49,74 11,9 13" style="fill:lime;stroke:purple;stroke-width:1" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+<!--</div>
+<div style="display: inline-block;">-->
+<svg height="110" width="120">
+  <polygon points="29 105,117 103,112 13,84 12,81 45,59 44,56 15,26 13" style="fill:lime;stroke:purple;stroke-width:1" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+<!--</div >
+<div style="display: inline-block;">-->
+<svg height="100" width="128">
+  <polygon points="26 94,126 92,125 11,87 12,72 44,73 47,54 13,24 11" style="fill:lime;stroke:purple;stroke-width:1" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
     					<div class="box__face box__face--right"></div>
     					<div class="box__face box__face--left"></div>
     					<div class="box__face box__face--top"></div>
@@ -116,7 +150,7 @@
 	
 			
 
-					<input type="checkbox" name="show_graph"  id="show_graph"  onclick="checkbox()">
+					<input type="checkbox" name="show_graph"  id="show_graph"  onclick="checkbox2()">
 					<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/show_graph.png">
 					<span >Show Graphs</span>
 		
@@ -159,6 +193,7 @@
 	</div>
 <!-------------------------------------------input paramerters division closed ---------------------------->
 
+<div id="chartContainer" style="height: 300px; width: 100% display:none;"></div>
 
 </div>
 
