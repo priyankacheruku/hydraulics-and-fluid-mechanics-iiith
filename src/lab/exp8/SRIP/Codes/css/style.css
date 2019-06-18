@@ -1,18 +1,21 @@
 @import url('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css');
 
 @import url("parameter.css");
+/*@import url("graph.css");
 /*main part*/
 .container{
  	  margin-left: auto;
 	  margin-right: auto;
   	  width:70%;
+
 }
 
 /* buttons */
 
 .white_color{
-	background-color: Dodgerblue;
+	background-color:#F5F5F5;
 	padding-left:  200px;
+  
 }
 
 /* Style buttons */
@@ -36,8 +39,13 @@
 	font-size: 16px;
 	height: 500px;
 	width: 100%;
+  
 }
+.showresult{
 
+  display: inline-block;
+    height: 500px;
+}
 
 
 /*scene */
@@ -103,7 +111,7 @@
 .box__face--bottom { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/tile.jpg");}
 
 .box__face--front  { transform: rotateY(  0deg) translateZ( 50px); }
-.box__face--back   { transform: rotateY(180deg) translateZ( 50px); }
+.box__face--back   { transform: rotateY(  0deg) translateZ( 50px); }/* changed roatation as it diplaying mirrord data*/
 
 .box__face--right  { transform: rotateY( 90deg) translateZ(150px); }
 .box__face--left   { transform: rotateY(-90deg) translateZ(150px); }
