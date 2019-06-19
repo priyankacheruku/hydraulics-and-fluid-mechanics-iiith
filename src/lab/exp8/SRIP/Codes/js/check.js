@@ -132,13 +132,13 @@ function show(){
        //var q =(2/3)* parseInt(inputValues.cof)*parseInt(inputValues.length)*Math.sqrt(2*9.8)*parseInt(inputValues.hei);
        //alert(2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2)));
        //alert(q);2/3*c*l*Math.sqrt(2*9.8)*Math.pow(h,(3/2))
-       var q=parseFloat(1.71*c*l*Math.pow(h,(3/2)));
+       var q=parseFloat(1.71*c*l*Math.pow(h,(3/2))).toFixed(2);
        
-       var V =q/a;
-       var hv= Math.pow(V,2)/(2*9.8);
-       outputValues.H=h+hv;
+       var V =parseFloat(q/a).toFixed(2);
+       var hv= parseFloat(Math.pow(V,2)/(2*9.8)).toFixed(2);
+       outputValues.H=parseFloat(h+hv).toFixed(2);
        //qv is flow of water with velocity for total height
-       outputValues.qv=1.71*c*l*(Math.pow(outputValues.H,3/2)-Math.pow(hv,3/2))
+       outputValues.qv= parseFloat(1.71*c*l*(Math.pow(outputValues.H,3/2)-Math.pow(hv,3/2))).toFixed(2);
        document.getElementById("q_value").innerHTML = "q value without velocity"+q+"<br> q value with velocity is "+ outputValues.qv+"h value"+outputValues.H;
 
        add_element_to_array();
@@ -160,7 +160,7 @@ function display_array()
 {
 
       var e = "OBSERVATION TABLE<hr/>";   
-      e+="OBSERVATION&nbsp;&nbsp;" + "NUMBER&nbsp;&nbsp;"+ "Height" +"&nbsp;&nbsp;"+" qv"+"<hr/>"
+      e+="OBSERVATION&nbsp;&nbsp;" + "No&nbsp;&nbsp;"+ "Height" +"&nbsp;&nbsp;"+" qv"+"<hr/>"
      for (var y=0; y<x; y++){
 
         e += "OBSERVATION "+ y+ "&nbsp;&nbsp;"+ arr[y][0] +"&nbsp;&nbsp;"+arr[y][1]+"<br/>";

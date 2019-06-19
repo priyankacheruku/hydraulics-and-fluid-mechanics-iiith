@@ -7,8 +7,8 @@ function checkbox2(){
 
   	
 if (checkBox.checked == true){
-
-
+	var ch = document.getElementById("chartContainer");
+	ch.style.display = "block";
 
 	var chart = new CanvasJS.Chart("chartContainer", {
 		animationEnabled: true,
@@ -17,13 +17,16 @@ if (checkBox.checked == true){
 		},
 		axisX: {
 			title: "Height",
+			xValueFormatString: "Height ##.##",
 		},
 		axisY: {
 			title: "flow of discharge",
-			includeZero: false,
+			yValueFormatString: "q ##.##",
+			includeZero: true,
 			scaleBreaks: {
 				autoCalculate: true
 			}	
+
 		},
 		data: [{
 			type: "line",
@@ -31,9 +34,9 @@ if (checkBox.checked == true){
 
 			dataPoints: [
 				
-			//{ x: arr[1][0], y:[1][0] },
-				{ x: 2, y: 930 },
-				{ x: 32, y: 750 }
+				{ x:parseFloat(arr[0][0]), y:parseFloat(arr[0][1]) },
+				{ x:parseFloat(arr[1][0]), y:parseFloat(arr[1][1]) },
+				{ x:parseFloat(arr[2][0]), y:parseFloat(arr[2][1]) }
 			]
 		}]
 	});
@@ -42,8 +45,10 @@ if (checkBox.checked == true){
 	
 	}
 	else{
+		//alert("asad");
 		var ch = document.getElementById("chartContainer");
 		ch.style.display = "none";
+		//alert("hgjg");
 	}
 
 }
