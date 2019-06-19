@@ -50,80 +50,13 @@
 
 /*scene */
 
-.box__face {
-  position: absolute;
- 
-}
+
 .scene {
-  width: 600px;
-  height: 300px;
-  margin-left: 125px;
-  margin-top: 75px;
-  perspective: 200px;
-
+  width: 100%;
+  height: 460px;
+  background-color: white;
+  border: 2px solid red;
 }
-
-.box {
-  width: 300px;
-  height: 600px;
-  position: relative;
- 
-  
-}
-
-.box__face--front,
-.box__face--back {
-  width: 600px;
-  height: 300px;
-  
-}
-
-.box__face--right{
-  width: 100px;
-  height: 300px;
-  left: 400px;
-}
-.box__face--left {
-  width: 100px;
-  height: 300px;
-  left:100px;
-  
-}
-
-.box__face--top
-{
-  width: 600px;
-  height: 100px;
-  top: 50px;
- 
-}
-.box__face--bottom {
-  width: 600px;
-  height: 100px;
-  top: 150px;
-  
-}
-
-.box__face--right  { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/378.jpg"); }
-.box__face--back   {  background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/382.jpg"); }
-.box__face--left   { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/378.jpg"); }
-.box__face--top    { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/376.jpg");  }
-.box__face--bottom { background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/images/tile.jpg");}
-
-.box__face--front  { transform: rotateY(  0deg) translateZ( 50px); }
-.box__face--back   { transform: rotateY(  0deg) translateZ( 50px); }/* changed roatation as it diplaying mirrord data*/
-
-.box__face--right  { transform: rotateY( 90deg) translateZ(150px); }
-.box__face--left   { transform: rotateY(-90deg) translateZ(150px); }
-
-.box__face--top    { transform: rotateX( 90deg) translateZ(100px); }
-.box__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
-
-
-
-
-
-
 
 /* start expertipent */
 .grey_color{
