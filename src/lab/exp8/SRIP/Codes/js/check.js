@@ -1,3 +1,7 @@
+//script file for storing input and output parameters ,calculating values
+
+
+//input parameters for global access
 function Parameters(l, h, cd , a) {
   this.len= l;
   this.hei = h;
@@ -6,7 +10,24 @@ function Parameters(l, h, cd , a) {
 
 
 }
-var inputValues = new Parameters(50, 50, 50, 50);
+//output parameters for global access
+function outputParameters(q,H) {
+  this.qv=q;
+  this.H=H;
+}
+//initilization
+var inputValues = new Parameters(50, 0.1, 0.5, 50);
+var outputValues =new outputParameters(0,0);
+
+//an arrat for displaying the resultand observations
+  var x = 0;
+  var arr = Array(3).fill(0);
+  for (var i = 0; i < arr.length; i++) { 
+      arr[i] = new Array(2).fill(0); 
+      //alert(arr[i][0]);
+  }
+
+
 
 
 
@@ -20,7 +41,7 @@ function checkbox() {
 
 
 //length
-       var length = document.getElementById("Length");
+      var length = document.getElementById("Length");
       var length_output= document.getElementById("Length_output");
       length_output.innerHTML = length.value;
 
@@ -33,7 +54,7 @@ function checkbox() {
       }
 
   //height
-     var height = document.getElementById("Height");
+      var height = document.getElementById("Height");
       var height_output= document.getElementById("Height_output");
       height_output.innerHTML = height.value;
 
@@ -72,7 +93,10 @@ function checkbox() {
       }
   }//if closing for input parameters 
 
+  
+//if checkbox  deselected
   else {
+
      text.style.display = "none";
   }
 
@@ -81,19 +105,21 @@ function checkbox() {
 
 
 
-
+//to display input values and calculated values
 function show(){
-  //alert("sa");
+  
        //document.getElementById("sh").style.display=block;
-      document.getElementById("sh").innerHTML = "length is  " + inputValues.len+"<br>height is" + 
-      inputValues.hei+"<br>cofficient of discharge is" +
+       document.getElementById("sh").innerHTML = "length is  " + inputValues.len+"<br>height is" + 
+       inputValues.hei+"<br>cofficient of discharge is" +
        inputValues.cof+"<br>area is" + inputValues.are;
-       //"RESULT without velocity is ";
-       //alert("sa");
+      
+       //caverting string to integer
        var l=parseInt(inputValues.len);
        var h=parseFloat(inputValues.hei);
        var c=parseFloat(inputValues.cof);
        var a=parseInt(inputValues.are);
+
+        //"RESULT without velocity is ";
        //q=2/3 * c * l * sqrt (2g) * h ^ 2/3 
        //q=(1.71*cd*l*(h^(3/2))
 
@@ -110,7 +136,34 @@ function show(){
        
        var V =q/a;
        var hv= Math.pow(V,2)/(2*9.8);
-       var h1=h+hv;
-       var qv=1.71*c*l*(Math.pow(h1,3/2)-Math.pow(hv,3/2))
-       document.getElementById("q_value").innerHTML = "q value without velocity"+q+"<br> q value with velocity is "+qv;
+       outputValues.H=h+hv;
+       //qv is flow of water with velocity for total height
+       outputValues.qv=1.71*c*l*(Math.pow(outputValues.H,3/2)-Math.pow(hv,3/2))
+       document.getElementById("q_value").innerHTML = "q value without velocity"+q+"<br> q value with velocity is "+ outputValues.qv+"h value"+outputValues.H;
+
+       add_element_to_array();
+       display_array();
+}
+
+
+function add_element_to_array()
+  {
+    arr[x][0] = outputValues.H;
+    arr[x][1] = outputValues.qv;
+    alert("Elements: " + arr[x][0]+" "+arr[x][1]+" Added at index " + x);
+    x++;
+    outputValues.H=0;
+    outputValues.qv=0;
+  }
+
+function display_array()
+{
+
+      var e = "OBSERVATION TABLE<hr/>";   
+      e+="OBSERVATION&nbsp;&nbsp;" + "NUMBER&nbsp;&nbsp;"+ "Height" +"&nbsp;&nbsp;"+" qv"+"<hr/>"
+     for (var y=0; y<x; y++){
+
+        e += "OBSERVATION "+ y+ "&nbsp;&nbsp;"+ arr[y][0] +"&nbsp;&nbsp;"+arr[y][1]+"<br/>";
+      }
+      document.getElementById("Result").innerHTML =e;
 }

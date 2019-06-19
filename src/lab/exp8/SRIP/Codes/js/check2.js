@@ -1,43 +1,49 @@
+//script file to display graph on clickcheckbox
 
 function checkbox2(){
-  
+  //alert(outputValues.qv);
+  //alert(arr[0][0]);
   	var checkBox = document.getElementById("show_graph");
-  	//alert("ds");
-  	var ch = document.getElementById("chartContainer");
-  	if (checkBox.checked == true){
 
-  		//ch.style.display = "block";
-			var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	animationEnabled: true,
-	title:{
-		text: "q vs log(h)"
-	},
+  	
+if (checkBox.checked == true){
 
-	axisY: {
-		title: "Number of Visitors",
-		includeZero: false,
-		scaleBreaks: {
-			autoCalculate: true
-		}
-	},
-	data: [{
-		type: "line",
-		color: "#F08080",
-		dataPoints: [
-			
-			{ x: 1, y: 890 },
-			{ x: 2, y: 930 },
-			{ x: 32, y: 750 }
-		]
-	}]
-});
-chart.render();
+
+
+	var chart = new CanvasJS.Chart("chartContainer", {
+		animationEnabled: true,
+		title:{
+			text: "flow of discharge(q) vs Height"
+		},
+		axisX: {
+			title: "Height",
+		},
+		axisY: {
+			title: "flow of discharge",
+			includeZero: false,
+			scaleBreaks: {
+				autoCalculate: true
+			}	
+		},
+		data: [{
+			type: "line",
+			color: "#F08080",
+
+			dataPoints: [
+				
+			//{ x: arr[1][0], y:[1][0] },
+				{ x: 2, y: 930 },
+				{ x: 32, y: 750 }
+			]
+		}]
+	});
+	
+	chart.render();
+	
 	}
 	else{
-	
+		var ch = document.getElementById("chartContainer");
 		ch.style.display = "none";
 	}
 
 }
-
