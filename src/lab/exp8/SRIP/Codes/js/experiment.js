@@ -19,19 +19,21 @@ ctx.restore();
 ctx.save();
 var rctx = c.getContext("2d");
 rctx.rotate(4* Math.PI / 180);
-rctx.fillRect(28, 150, 340, 30);
-ctx.fill();
-ctx.restore();
+rctx.beginPath();
+rctx.fillStyle="brown";
+rctx.rect(28, 150, 340, 30);
+rctx.fill();
+rctx.restore();
 
 //container
-ctx.save();
+rctx.save();
 var rctx = c.getContext("2d");
 rctx.rotate(4* Math.PI / 180);
 rctx.beginPath();
 rctx.rect(29, 100, 340, 50);
 rctx.fillStyle = "blue";
 rctx.fill();
-ctx.restore();
+rctx.restore();
 
 
 
@@ -41,31 +43,34 @@ var front_rect=c.getContext("2d");
 
 front_rect.save();
 front_rect.rotate(-6* Math.PI / 180);
-front_rect.fillRect(330,210,80,30);
+front_rect.beginPath();
+front_rect.rect(330,210,80,30);
+front_rect.fillStyle ="brown";
+front_rect.fill();
 front_rect.restore();
 
 
 
 
 //out let water container
-var cylinder=document.getElementById("cylinder");
+//var cylinder=document.getElementById("cylinder");
 
-var cyl =cylinder.getContext("2d");
-drawCylinder(cyl ,0,10,100,100);
-
-
+var cyl =c.getContext("2d");
+cyl.save();
+drawCylinder(cyl ,400,210,100,100);
 
 cyl.beginPath();
-drawCylinder(cyl ,5,40,90,60);
+drawCylinder(cyl ,405,240,90,65);
 cyl.fillStyle="blue";
 cyl.fill();
 
-
-
 cyl.beginPath();
-cyl.rect(5,45,90,50); //to display blue in cylinder
+cyl.rect(405,245,90,52); //to display blue in cylinder
 cyl.fillStyle= "blue";
 cyl.fill();
+
+cyl.restore();
+
 
 //function to draw cylinder
 function drawCylinder(cy, x, y, w, h) {
