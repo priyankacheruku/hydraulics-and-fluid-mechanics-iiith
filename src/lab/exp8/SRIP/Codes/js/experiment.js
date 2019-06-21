@@ -15,9 +15,48 @@ ctx.fillRect(350, 200, 10, 110);
 ctx.fillRect(420, 195, 10, 110);
 ctx.restore();
 
-//base support
-ctx.save();
+
 var rctx = c.getContext("2d");
+
+rctx.save();
+var rctx = c.getContext("2d");
+//rctx.rotate(4* Math.PI / 180);
+rctx.beginPath();
+rctx.rect(18, 70, 50, 90);//BACKSIDE
+rctx.fillStyle = "#4e9daf";
+rctx.fill();
+rctx.restore();
+
+
+
+
+
+/*
+rctx.save();
+var rctx = c.getContext("2d");
+rctx.rotate(4* Math.PI / 180);
+rctx.beginPath();
+rctx.rect(35, 75, 400, 50);//glass
+rctx.fillStyle = "#74ccf4";
+rctx.fill();
+rctx.restore();
+*/
+
+
+//container
+rctx.save();
+var rctx = c.getContext("2d");
+rctx.rotate(2* Math.PI / 180);
+rctx.beginPath();
+rctx.rect(33,100, 400, 62);//water
+rctx.fillStyle = "blue";
+rctx.fill();
+rctx.restore();
+
+
+
+//base support
+rctx.save();
 rctx.rotate(4* Math.PI / 180);
 rctx.beginPath();
 rctx.fillStyle="brown";
@@ -25,15 +64,6 @@ rctx.rect(28, 150, 340, 30);
 rctx.fill();
 rctx.restore();
 
-//container
-rctx.save();
-var rctx = c.getContext("2d");
-rctx.rotate(4* Math.PI / 180);
-rctx.beginPath();
-rctx.rect(29, 100, 340, 50);
-rctx.fillStyle = "blue";
-rctx.fill();
-rctx.restore();
 
 
 
@@ -49,7 +79,20 @@ front_rect.fillStyle ="brown";
 front_rect.fill();
 front_rect.restore();
 
+front_rect.save();
+front_rect.beginPath();
+front_rect.rect(350,100,20,80);
+front_rect.fillStyle ="brown";
+front_rect.fill();
+front_rect.restore();
 
+
+front_rect.save();
+front_rect.beginPath();
+front_rect.rect(410,100,20,80);
+front_rect.fillStyle ="brown";
+front_rect.fill();
+front_rect.restore();
 
 
 //out let water container
