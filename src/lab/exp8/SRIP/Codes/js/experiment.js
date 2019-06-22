@@ -1,9 +1,36 @@
 //script for 2d canavas  to represent simulation
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+var vernier =c.getContext("2d");
 
 
-//suport stands for water tanker
+
+//support for adjuster
+ctx.save();
+ctx.moveTo(185,30);
+ctx.lineTo(195,30);
+ctx.stroke();
+ctx.restore();
+
+
+//line which touches water flow
+ctx.save();
+ctx.moveTo(187,76);
+ctx.lineTo(187,130);
+ctx.stroke();
+ctx.restore();
+
+
+//border of glass
+ctx.save();
+ctx.moveTo(68,70);
+ctx.lineTo(430,85);
+ctx.stroke();
+ctx.restore();
+
+
+
+//suport stands for hydralic bench
 ctx.save();
 ctx.beginPath();
 ctx.fillStyle="brown";
@@ -19,33 +46,71 @@ ctx.restore();
 var rctx = c.getContext("2d");
 
 rctx.save();
-var rctx = c.getContext("2d");
-//rctx.rotate(4* Math.PI / 180);
 rctx.beginPath();
-rctx.rect(18, 70, 50, 90);//BACKSIDE
+rctx.rect(68, 70, 15, 90);//side
+rctx.fillStyle = "#cae2e7";
+rctx.fill();
+rctx.restore();
+
+
+rctx.save();
+rctx.beginPath();
+rctx.rect(20, 69, 50, 90);//BACKSIDE
 rctx.fillStyle = "#4e9daf";
 rctx.fill();
 rctx.restore();
 
 
+//support for vernier with wood
+ctx.save();
+ctx.rotate(0* Math.PI / 180);
+ctx.beginPath();
+ctx.rect(160,83, 50, 5);
+ctx.fillStyle = "#ff9933";
+ctx.fill();
+ctx.restore();
 
 
+//vernier
+ctx.save();
+ctx.rotate(0* Math.PI / 180);
+ctx.beginPath();
+ctx.rect(185,20, 5,65); //part of vernier
+ctx.fillStyle = "#b35900"; 
+ctx.fill();
+ctx.restore();
 
-/*
-rctx.save();
-var rctx = c.getContext("2d");
-rctx.rotate(4* Math.PI / 180);
-rctx.beginPath();
-rctx.rect(35, 75, 400, 50);//glass
-rctx.fillStyle = "#74ccf4";
-rctx.fill();
-rctx.restore();
-*/
+
+//connection between scale and support
+ctx.save();
+ctx.rotate(0* Math.PI / 180);
+ctx.beginPath();
+ctx.rect(165,50, 25,5);
+ctx.fillStyle = "#b35900"; 
+ctx.fill();
+
+//adjuster
+ctx.save();
+ctx.rotate(0* Math.PI / 180);
+ctx.beginPath();
+ctx.rect(195,27, 5, 5);
+ctx.fillStyle = "#b35900";
+ctx.fill();
+ctx.restore();
+
+//scale
+ctx.save();
+ctx.rotate(0* Math.PI / 180);
+ctx.beginPath();
+ctx.rect(170,50, 5, 35);
+ctx.fillStyle = "#2d50b9";//scale color
+ctx.fill();
+ctx.restore();
 
 
 //container
-rctx.save();
 var rctx = c.getContext("2d");
+rctx.save();
 rctx.rotate(2* Math.PI / 180);
 rctx.beginPath();
 rctx.rect(33,100, 400, 62);//water
@@ -64,10 +129,6 @@ rctx.rect(28, 150, 340, 30);
 rctx.fill();
 rctx.restore();
 
-
-
-
-
 //front view
 var front_rect=c.getContext("2d");
 
@@ -81,7 +142,7 @@ front_rect.restore();
 
 front_rect.save();
 front_rect.beginPath();
-front_rect.rect(350,100,20,80);
+front_rect.rect(350,90,20,90);
 front_rect.fillStyle ="brown";
 front_rect.fill();
 front_rect.restore();
@@ -89,21 +150,22 @@ front_rect.restore();
 
 front_rect.save();
 front_rect.beginPath();
-front_rect.rect(410,100,20,80);
+front_rect.rect(410,85,20,90);//support for weir
 front_rect.fillStyle ="brown";
 front_rect.fill();
 front_rect.restore();
 
 
-//out let water container
+//out let water container sump
 //var cylinder=document.getElementById("cylinder");
 
 var cyl =c.getContext("2d");
+
 cyl.save();
-drawCylinder(cyl ,400,210,100,100);
+
 
 cyl.beginPath();
-drawCylinder(cyl ,405,240,90,65);
+drawCylinder(cyl ,405,240,90,65);//water level in sump 
 cyl.fillStyle="blue";
 cyl.fill();
 
@@ -111,8 +173,16 @@ cyl.beginPath();
 cyl.rect(405,245,90,52); //to display blue in cylinder
 cyl.fillStyle= "blue";
 cyl.fill();
-
+drawCylinder(cyl ,400,210,100,100);
 cyl.restore();
+
+// outer border of glass
+ctx.save();
+ctx.moveTo(20,70);
+ctx.lineTo(350,90);
+ctx.stroke();
+ctx.restore();
+
 
 
 //function to draw cylinder
