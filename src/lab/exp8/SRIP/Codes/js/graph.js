@@ -1,7 +1,6 @@
 function viewchart(){
 	
-
-
+	//alert(arr[0][0]);
 	var ch = document.getElementById("graph");
 	ch.style.display = "block";
 

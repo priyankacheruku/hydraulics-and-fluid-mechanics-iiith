@@ -1,6 +1,5 @@
 //script file for storing input and output parameters ,calculating values
 
-
 //input parameters for global access
 function Parameters(l, h, cd , a) {
   this.len= l;
@@ -19,15 +18,14 @@ function outputParameters(q,H) {
 var inputValues = new Parameters(50, 0.1, 0.5, 50);
 var outputValues =new outputParameters(0,0);
 
-//an arrat for displaying the resultand observations
+//an array for displaying the resultand observations
   var x = 0;
-  var arr = Array(3).fill(0);
+  var arr = Array(3);
   for (var i = 0; i < arr.length; i++) { 
       arr[i] = new Array(2).fill(0); 
+
       //alert(arr[i][0]);
   }
-
-
 
 
 
