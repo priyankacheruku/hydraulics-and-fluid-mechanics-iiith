@@ -223,9 +223,5 @@ function drawCylinder(cy, x, y, w, h) {
     cy.stroke();
 }
 
-//checking
-//setTimeout(function(){alert("Hello")},3000);
-
-
 //funtions to be called for replacing weirs on hydralic bench
-setTimeout(display_weirs,3000);
+setTimeout(display_Vweir,3000);
