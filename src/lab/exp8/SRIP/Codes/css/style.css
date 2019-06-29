@@ -1,30 +1,31 @@
 @import url('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css');
 @import url("parameter.css");
 /*@import url("graph.css");
+
+
 /*main part*/
 .container{
- 	  margin-left: auto;
-	  margin-right: auto;
-  	  width:70%;
+	margin-top: 30px;
+ 	margin-left: auto;
+	margin-right: auto;
+  	width:70%;
 
 }
 
 /* buttons */
-
 .white_color{
 	background-color:#F5F5F5;
-	padding-left:  200px;
-  
+	padding-left:  200px;  
 }
 
-/* Style buttons */
 
+/* Style buttons */
 .btn {
 
   background-image: url("/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/colorless.png");
   border: none; /* Remove borders */
   color: black; /* White text */
-  padding: 3px 10px 5px 2px; /* Some padding */
+  padding: 5px 10px 5px 2px; /* Some padding */
   font-size: 16px; /* Set a font size */
   margin-left: 5px;
  /* cursor: pointer;  Mouse pointer on hover */
@@ -41,6 +42,8 @@
 	width: 100%;
   
 }
+
+
 .showresult{
 
   display: inline-block;
@@ -49,8 +52,6 @@
 
 
 /*scene */
-
-
 .scene {
   width: 100%;
   height: 460px;
@@ -58,20 +59,12 @@
   border: 2px solid red;
 }
 
-
-
-/* start expertipent */
-.grey_color{
-	background-color:#808080;
-	text-align: center;
-	color: White;
-	font-size: 20px;
-}
 /*buttons and checkbox */
 .whitesmoke_color{
 	background-color: 	#F5F5F5;
-	padding-left:  50px;
+	padding-left:  250px;
 }
+
 .parameters{
   display: none;
 }

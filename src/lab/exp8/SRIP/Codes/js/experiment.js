@@ -164,10 +164,8 @@ front_rect.restore();
 var cyl =c.getContext("2d");
 
 cyl.save();
-
-
 cyl.beginPath();
-drawCylinder(cyl ,405,240,90,65);//water level in sump 
+drawCylinder(cyl ,405,240,90,63);//water level in sump 
 cyl.fillStyle="blue";
 cyl.fill();
 
@@ -175,7 +173,7 @@ cyl.beginPath();
 cyl.rect(405,245,90,52); //to display blue in cylinder
 cyl.fillStyle= "blue";
 cyl.fill();
-drawCylinder(cyl ,400,210,100,100);
+drawCylinder(cyl ,400,210,100,100);//sump to stote
 cyl.restore();
 
 // outer border of glass

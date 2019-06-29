@@ -46,8 +46,8 @@ function display_Rweir(){
 	weir.lineTo(410,170);//horizontal below
 	weir.lineTo(410,95);//vertical
 	weir.lineTo(395,98);//horizontal
-	weir.lineTo(395,140);//vertical
-	weir.lineTo(385,140);//horizontal
+	weir.lineTo(395,130);//vertical
+	weir.lineTo(385,130);//horizontal
 	weir.lineTo(385,99);//
 	weir.lineTo(370,100);//horizontal
 //to fill the space in the shape
@@ -57,9 +57,8 @@ function display_Rweir(){
 	weir.strokeStyle = "purple";
 	weir.stroke();
 	weir.restore();
+
 	//edge weir
-
-
 	setTimeout(display_Eweir,3000); 
 }
 function display_Eweir(){
