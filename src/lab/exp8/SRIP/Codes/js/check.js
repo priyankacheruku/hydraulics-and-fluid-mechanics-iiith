@@ -1,5 +1,12 @@
 //script file for storing input and output parameters ,calculating values
 
+
+window.onload = window.localStorage.clear();
+
+
+
+
+
 //input parameters for global access
 function Parameters(l, h, cd , a) {
   this.len= l;
@@ -14,6 +21,7 @@ function outputParameters(q,H) {
   this.qv=q;
   this.H=H;
 }
+
 //initilization
 var inputValues = new Parameters(50, 0.1, 0.5, 50);
 var outputValues =new outputParameters(0,0);
@@ -28,7 +36,23 @@ var outputValues =new outputParameters(0,0);
   }
 
 
-
+localStorage["array"] = JSON.stringify(arr);
+/*
+array_values(arr);
+function array_values() {
+  var points=Array(3);
+  for (i=0; i<params.length; i++) {
+   alert("ad");
+  }
+}
+var myObj, i;
+myObj = {
+   "cars": [
+    {"name":"Ford", "models":["Fiesta", "Focus", "Mustang"]},
+    {"name":"BMW", "models":["320", "X3", "X5"]},
+    {"name":"Fiat", "models":["500", "Panda"] }
+  ]
+}*/
 function checkbox() {
   
 	//alert("js");
@@ -148,10 +172,19 @@ function add_element_to_array()
   {
     arr[x][0] = outputValues.H;
     arr[x][1] = outputValues.qv;
+    //myObj.cars[x].models[0]=arr[x][0];
+    //alert(myObj.cars[x].models[0]);
+    //myObj.p[x].point[1]=arr[x][1];
     alert("Elements: " + arr[x][0]+" "+arr[x][1]+" Added at index " + x);
     x++;
     outputValues.H=0;
     outputValues.qv=0;
+
+    localStorage["array"] = JSON.stringify(arr);
+
+  
+   // array_values(arr);
+
   }
 
 function display_array()

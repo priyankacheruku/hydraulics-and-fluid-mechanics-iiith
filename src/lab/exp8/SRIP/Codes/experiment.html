@@ -1,7 +1,8 @@
 <html>
 
 <head>
-
+	 <!--<meta http-equiv='refresh' content='0; URL=index.html'>-->
+	
 	<!--canvasjs libraries-->
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
@@ -15,10 +16,12 @@
 	<title>weirs experiment</title>
 </head>
 <body>
-
-
+<script type="text/javascript">
+	window.onbeforeunload = function () {
+   		return 'Are you sure you want to leave?';
+}
+</script>
 <div class="container">
-
 
 <!-- buttons above -->
 	<div class="white_color"> 
@@ -30,13 +33,13 @@
 			Full View Graph
 		</button>
 
-		<button class="btn" name="restart">
+		<button class="btn" name="restart" onclick="window.location.reload();" >
 			<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/restart.png">
 			Restart
 		</button>
 
  
-		<button class="btn" name="restart" id="start" onclick="window.location='index.html';">
+		<button class="btn" name="stop" onclick="window.location='index.html';">
 			<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/stop.png">
 			Stop
 		</button>
@@ -46,10 +49,6 @@
 			Next
 		</button>
 	</div>
-
-	
-
-
 
 
 	<div class="black_color">
@@ -97,9 +96,7 @@
 	
 
 
-	<div class="grey_color">
-		*start the experiment.
-	</div>
+
 
 
 

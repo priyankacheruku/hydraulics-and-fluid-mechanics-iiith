@@ -1,6 +1,8 @@
 function viewchart(){
 	
-	//alert(arr[0][0]);
+	 var arr = JSON.parse(localStorage["array"]); 
+	 //alert(arr[0]);
+
 	var ch = document.getElementById("graph");
 	ch.style.display = "block";
 

@@ -1,5 +1,4 @@
 //script file to display graph on clickcheckbox
-
 function checkbox2(){
   //alert(outputValues.qv);
   //alert(arr[0][0]);

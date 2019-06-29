@@ -3,9 +3,9 @@
 /*@import url("graph.css");
 /*main part*/
 .container{
- 	  margin-left: auto;
-	  margin-right: auto;
-  	  width:70%;
+	margin-top: 30px;
+ 	align-self: center;
+ 	width:70%;
 
 }
 
@@ -52,6 +52,7 @@
 
 
 .scene {
+
   width: 100%;
   height: 460px;
   background-color: white;
@@ -67,11 +68,12 @@
 	color: White;
 	font-size: 20px;
 }
-/*buttons and checkbox */
-.whitesmoke_color{
-	background-color: 	#F5F5F5;
-	padding-left:  50px;
+/*checkbox */
+.check{
+	display:inline-block;
+	margin-left:  50px;
 }
 .parameters{
   display: none;
 }
+
