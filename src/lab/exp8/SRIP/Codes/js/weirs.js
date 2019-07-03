@@ -1,9 +1,16 @@
 //Script file for simulaton of weirs one after another
 
+
 function display_Vweir(){
+
+	 var c = document.getElementById("myCanvas");
+	 var weir =c.getContext("2d");
+
 
 	document.getElementById("weir3").style.display = "none";
 //v-shaped weir	
+
+
 	weir.save();
 	weir.beginPath();
 	weir.moveTo(370,100);//lefthand to right
@@ -23,21 +30,26 @@ function display_Vweir(){
 	weir.restore();
 
 //rectangular weir
-setTimeout(display_Rweir,3000);
+/*w.save();
+setTimeout(drawflow,1000);
+w.restore();
+*/
+setTimeout(display_Rweir,1000);
 
 }
 
 
 function display_Rweir(){
 
-
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
 
 	document.getElementById("weir2").style.display = "none";
 	document.getElementById("weir3").style.display = "inline-block";
 
 
-	drawblue();
-
+	//drawblue();
+	clearweir();
 //rcctangular weir
 	weir.save();
 	weir.beginPath();
@@ -64,13 +76,16 @@ function display_Rweir(){
 function display_Eweir(){
 
 
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
+
 	document.getElementById("weir1").style.display = "none";
 	document.getElementById("weir2").style.display = "inline-block";
 
 
-	drawblue();
+	//drawblue();
 // CLEAR rEctangular weir
-	clearRweir();
+	clearweir();
 
 
 //edge weir
@@ -94,7 +109,12 @@ function display_Eweir(){
 }
 
 //clear weir canvas 
-function clearRweir(){
+function clearweir(){
+
+
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
+
 	weir.save();
 	weir.beginPath();
 	weir.moveTo(370,100);//lefthand to right
@@ -111,8 +131,9 @@ function clearRweir(){
 	weir.stroke();
 	weir.restore();
 
-	drawblue();
+	//drawblue();
 }
+/*
 //draw blue for wATER
 function drawblue(){
 	weir.save();
@@ -130,3 +151,4 @@ function drawblue(){
 	weir.stroke();
 	weir.restore();
 }
+*/

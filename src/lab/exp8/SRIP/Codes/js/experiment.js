@@ -1,11 +1,11 @@
 //script for 2d canavas  to represent simulation
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-var vernier =c.getContext("2d");
-var weir =c.getContext("2d");
+function experiment(argument) {
+    // body...
 
-
-
+    document.getElementById("st").innerHTML = "Stop";
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var vernier =c.getContext("2d");
 
 //support for adjuster
 ctx.save();
@@ -54,6 +54,13 @@ rctx.fillStyle = "#cae2e7";
 rctx.fill();
 rctx.restore();
 
+rctx.save();
+rctx.rotate(4 * Math.PI / 180);
+rctx.beginPath();
+rctx.rect(70, 130, 355, 30);//back base
+rctx.fillStyle = "#ff5500";
+rctx.fill();
+rctx.restore();
 
 rctx.save();
 rctx.beginPath();
@@ -109,7 +116,7 @@ ctx.fillStyle = "#2d50b9";//scale color
 ctx.fill();
 ctx.restore();
 
-
+/*
 //container
 var rctx = c.getContext("2d");
 rctx.save();
@@ -119,7 +126,7 @@ rctx.rect(33,100, 400, 62);//water
 rctx.fillStyle = "blue";
 rctx.fill();
 rctx.restore();
-
+*/
 
 
 //base support
@@ -222,4 +229,5 @@ function drawCylinder(cy, x, y, w, h) {
 }
 
 //funtions to be called for replacing weirs on hydralic bench
-setTimeout(display_Vweir,3000);
+setTimeout(display_Vweir,1000);
+}

@@ -2,21 +2,24 @@
 var count=0;
 function next(argument) {
 	// body...
+	
 
 	count+=1;
 	//alert(count);
 	switch (parseInt(count)) {
-  		case 1: displayVweir();
+		case 1: experiment();
+				break;
+  		case 2: displayVweir();
     			break;
-    	case 2:clearVweir();
+    	case 3:clearVweir();
     			break;
-    	case 3:displayRweir();
+    	case 4:displayRweir();
     			break;
-    	case 4:clearRweir();
+    	case 5:clearRweir();
     			break;
-    	case 5:displayEweir();
+    	case 6:displayEweir();
     			break;
-    	case 6:clearEweir();
+    	case 7:clearEweir();
     			break;
     	default:complete();
 
@@ -25,6 +28,10 @@ function next(argument) {
 
 
 function displayVweir(argument) {
+
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
+
 
 	document.getElementById("weir3").style.display = "none";
 //v-shaped weir	
@@ -50,6 +57,9 @@ function displayVweir(argument) {
 
 
 function clearVweir(argument){
+
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
 
 	
 	document.getElementById("weir3").style.display = "inline-block";
@@ -104,6 +114,9 @@ function displayRweir(argument) {
 
 function clearRweir(){
 
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
+
 	document.getElementById("weir2").style.display = "inline-block";
 	weir.save();
 	weir.beginPath();
@@ -126,6 +139,9 @@ function clearRweir(){
 }
 
 function displayEweir(argument) {
+
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
 
 	document.getElementById("weir1").style.display = "none";	
 
@@ -153,6 +169,9 @@ function displayEweir(argument) {
 
 
 function clearEweir(argument) {
+
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
 
 	document.getElementById("weir1").style.display = "inline-block";
 	weir.save();
