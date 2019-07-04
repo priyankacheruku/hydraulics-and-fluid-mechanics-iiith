@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="js/check2.js"></script>
 	<script type="text/javascript" src="js/next.js"> </script>
 	<script type="text/javascript" src="js/experiment.js"> </script>
+		<script type="text/javascript" src="js/water.js"> </script>
 	<title>weirs experiment</title>
 
 </head>
@@ -40,15 +41,21 @@
 		</button>
 
  
-		<button class="btn" name="stop" onclick="window.location='experiment.html';">
-				<span id="st">Start</span>
+		<button class="btn" name="start" id="start" onclick="window.location='experiment.html';">
+				<img src="images/start.png">
+				<span>simulation</span>
 
+		</button>
+		<button class="btn" name="stop" id="stop" onclick="window.location='experiment.html';" style="display: none;">
+			<img src="images/stop.png">
+			stop
 		</button>
 		
 		<button class="btn" id="next" onclick="next();">
 			<img src="images/next.png">
 			Next
 		</button>
+		
 		
 	</div>
 
@@ -120,9 +127,9 @@
   				<p>Area :	<input type="range" min="1" max="100" value="50" class="slider" id="Area">
   					Value: <span id="Area_output"></span></p>
 		</div>
-		<button onclick="show()" >show</button>
+		<button onclick="show()" >calculate and display</button>
 		<div id="sh" >
-			press SHOW button and observe values
+			press button to calculate 
 		</div>
 		<div ><p id="q_value"><p>
 			<div id="Result"></div>

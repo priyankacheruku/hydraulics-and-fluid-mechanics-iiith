@@ -43,16 +43,21 @@
 		</button>
 
  
-		<button class="btn" name="stop" onclick="experiment();">
-			<!--<img src="images/stop.png">-->
+		<button class="btn" name="start" id="start" onclick="experiment();">
+			<img src="images/start.png">
 			<span id="st">Start</span>
 		</button>
 		
+		<button class="btn" name="stop" id="stop" onclick="window.location='experiment.html';" style="display: none;">
+			<img src="images/stop.png">
+			stop
+		</button>
+
 		<button class="btn" name="next" onclick="window.location='next.html';">
 			<img src="images/next.png">
 			Next
 		</button>
-	</div>
+			</div>
 
 
 	<div class="black_color">
@@ -153,11 +158,11 @@
   					Value: <span id="Area_output"></span></p>
 		</div>
 		
-		<input type="checkbox"  onclick="show()">SHOW
+		<button onclick="show()" >calculate and display</button>
 		<div id="sh" >
-			enable SHOW  observe input values and calculated values
-		</div>
-		<div ><p id="q_value"><p>
+			press button to calculate 
+		</div>	
+			<div ><p id="q_value"><p>
 			<div id="Result"></div>
 		</div>
 	</div>

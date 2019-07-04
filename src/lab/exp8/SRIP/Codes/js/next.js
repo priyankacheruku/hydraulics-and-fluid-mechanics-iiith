@@ -11,15 +11,23 @@ function next(argument) {
 				break;
   		case 2: displayVweir();
     			break;
-    	case 3:clearVweir();
+    	case 3: 
+    	case 7: 
+    	case 11:
+    			displaywater();
     			break;
-    	case 4:displayRweir();
+    	case 4: case 8: case 12:
+    			clearwater();
     			break;
-    	case 5:clearRweir();
+    	case 5:clearVweir();
     			break;
-    	case 6:displayEweir();
+    	case 6:displayRweir();
     			break;
-    	case 7:clearEweir();
+    	case 9:clearRweir();
+    			break;
+    	case 10:displayEweir();
+    			break;
+    	case 13:clearEweir();
     			break;
     	default:complete();
 
@@ -66,8 +74,8 @@ function clearVweir(argument){
 	weir.save();
 	weir.beginPath();
 	weir.moveTo(370,100);//lefthand to right
-	weir.lineTo(370,130);//vertical
-	weir.lineTo(410,130);//horizontal below
+	weir.lineTo(370,175);//vertical
+	weir.lineTo(410,170);//horizontal below
 	weir.lineTo(410,95);//vertical
 	weir.lineTo(395,95);//horizontal
 	
@@ -85,6 +93,10 @@ function clearVweir(argument){
 
 
 function displayRweir(argument) {
+
+
+	var c = document.getElementById("myCanvas");
+	var weir =c.getContext("2d");
 	
 	document.getElementById("weir2").style.display = "none";	
 
@@ -107,7 +119,7 @@ function displayRweir(argument) {
 	weir.strokeStyle = "purple";
 	weir.stroke();
 	weir.restore();
-	displaywater();
+	//displaywater();
 
 }
 
@@ -121,8 +133,8 @@ function clearRweir(){
 	weir.save();
 	weir.beginPath();
 	weir.moveTo(370,100);//lefthand to right
-	weir.lineTo(370,130);//vertical
-	weir.lineTo(410,130);//horizontal below
+	weir.lineTo(370,175);//vertical
+	weir.lineTo(410,170);//horizontal below
 	weir.lineTo(410,95);//vertical
 	weir.lineTo(395,95);//horizontal
 	
@@ -163,7 +175,7 @@ function displayEweir(argument) {
 	weir.strokeStyle = "purple";
 	weir.stroke();
 	weir.restore(); 
-	displaywater();
+	//displaywater();
 
 }
 
@@ -177,8 +189,8 @@ function clearEweir(argument) {
 	weir.save();
 	weir.beginPath();
 	weir.moveTo(370,100);//lefthand to right
-	weir.lineTo(370,130);//vertical
-	weir.lineTo(410,130);//horizontal below
+	weir.lineTo(370,175);//vertical
+	weir.lineTo(410,170);//horizontal below
 	weir.lineTo(410,95);//vertical
 	weir.lineTo(395,95);//horizontal
 	
@@ -213,33 +225,50 @@ function displayblank(argument) {
 	weir.lineTo(410,110);
 	weir.lineTo(370,110);
 //to fill the space in the shape
-	weir.fillStyle = "blue";
+	weir.fillStyle = "white";
 	weir.fill(); 
 //stroke style
-	weir.strokeStyle = "blue";
+	weir.strokeStyle = "white";
 	weir.stroke();
 	weir.restore();
 	
 }
 
 function displaywater(argument) {
-
+	
+	var c = document.getElementById("myCanvas");
+	var cyl =c.getContext("2d");
 	cyl.save();
 	cyl.beginPath();
 	drawCylinder(cyl ,405,240,90,63);//water level in sump 
-	cyl.fillStyle="blue";
+	cyl.fillStyle="#1ca3ec";
 	cyl.fill();
 
 	cyl.beginPath();
 	cyl.rect(405,245,90,52); //to display blue in cylinder
-	cyl.fillStyle= "blue";
+	cyl.fillStyle= "#1ca3ec";
 	cyl.fill();
 	cyl.restore();
 
+
+	var rctx = c.getContext("2d");
+	rctx.save();
+	rctx.rotate(4* Math.PI / 180);
+	rctx.beginPath();
+	rctx.rect(35,90, 325, 60);//water
+	rctx.fillStyle = "#1ca3ec";
+	rctx.fill();
+	rctx.restore();
+
 }
+
+
 
 
 function complete(argument) {
 	alert("experiment completed");
 	document.getElementById("next").disabled = true;
+}
+function clearwater(argument) {
+	alert("water to be removed");
 }

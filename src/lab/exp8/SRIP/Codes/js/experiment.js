@@ -2,7 +2,10 @@
 function experiment(argument) {
     // body...
 
-    document.getElementById("st").innerHTML = "Stop";
+    //document.getElementById("st").innerHTML = "Stop";
+    document.getElementById("start").style.display = "none";
+    document.getElementById("stop").style.display = "inline-block";
+
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     var vernier =c.getContext("2d");
@@ -116,19 +119,6 @@ ctx.fillStyle = "#2d50b9";//scale color
 ctx.fill();
 ctx.restore();
 
-/*
-//container
-var rctx = c.getContext("2d");
-rctx.save();
-rctx.rotate(2* Math.PI / 180);
-rctx.beginPath();
-rctx.rect(33,100, 400, 62);//water
-rctx.fillStyle = "blue";
-rctx.fill();
-rctx.restore();
-*/
-
-
 //base support
 rctx.save();
 rctx.rotate(4* Math.PI / 180);
@@ -172,6 +162,7 @@ var cyl =c.getContext("2d");
 
 cyl.save();
 cyl.beginPath();
+/*
 drawCylinder(cyl ,405,240,90,63);//water level in sump 
 cyl.fillStyle="blue";
 cyl.fill();
@@ -180,6 +171,7 @@ cyl.beginPath();
 cyl.rect(405,245,90,52); //to display blue in cylinder
 cyl.fillStyle= "blue";
 cyl.fill();
+*/
 drawCylinder(cyl ,400,210,100,100);//sump to stote
 cyl.restore();
 
@@ -190,6 +182,12 @@ ctx.lineTo(350,90);
 ctx.stroke();
 ctx.restore();
 
+
+
+
+//funtions to be called for replacing weirs on hydralic bench
+setTimeout(display_Vweir,1000);
+}
 
 
 //function to draw cylinder
@@ -226,8 +224,4 @@ function drawCylinder(cy, x, y, w, h) {
     cy.lineTo(x + w, y + h - h / 8);
 
     cy.stroke();
-}
-
-//funtions to be called for replacing weirs on hydralic bench
-setTimeout(display_Vweir,1000);
 }
