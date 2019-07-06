@@ -1,5 +1,4 @@
 //Script file for simulaton of weirs one after another
-
 function display_Vweir(){
 
 	 var c = document.getElementById("myCanvas");
@@ -27,9 +26,9 @@ function display_Vweir(){
 	weir.stroke();
 	weir.restore();
 setTimeout(drawflow,1000);
-setTimeout(clearflow,9000);
+//setTimeout(clearflow,9000);
 //rectangular weir
-setTimeout(display_Rweir,18000);
+//setTimeout(display_Rweir,18000);
 
 }
 
