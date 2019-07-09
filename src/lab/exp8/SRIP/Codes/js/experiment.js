@@ -6,24 +6,13 @@ function experiment(argument) {
     document.getElementById("start").style.display = "none";
     document.getElementById("stop").style.display = "inline-block";
 
+    document.getElementById("note").style.display = "inline-block";
+    document.getElementById("note").innerHTML = "hydralic bench";
+
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-    var vernier =c.getContext("2d");
+    //var vernier =c.getContext("2d");
 
-//support for adjuster
-ctx.save();
-ctx.moveTo(185,30);
-ctx.lineTo(195,30);
-ctx.stroke();
-ctx.restore();
-
-
-//line which touches water flow
-ctx.save();
-ctx.moveTo(187,76);
-ctx.lineTo(187,130);
-ctx.stroke();
-ctx.restore();
 
 
 //border of glass
@@ -72,52 +61,6 @@ rctx.fillStyle = "#4e9daf";
 rctx.fill();
 rctx.restore();
 
-
-//support for vernier with wood
-ctx.save();
-ctx.rotate(0* Math.PI / 180);
-ctx.beginPath();
-ctx.rect(160,83, 50, 5);
-ctx.fillStyle = "#ff9933";
-ctx.fill();
-ctx.restore();
-
-
-//vernier
-ctx.save();
-ctx.rotate(0* Math.PI / 180);
-ctx.beginPath();
-ctx.rect(185,20, 5,65); //part of vernier
-ctx.fillStyle = "#b35900"; 
-ctx.fill();
-ctx.restore();
-
-
-//connection between scale and support
-ctx.save();
-ctx.rotate(0* Math.PI / 180);
-ctx.beginPath();
-ctx.rect(165,50, 25,5);
-ctx.fillStyle = "#b35900"; 
-ctx.fill();
-
-//adjuster
-ctx.save();
-ctx.rotate(0* Math.PI / 180);
-ctx.beginPath();
-ctx.rect(195,27, 5, 5);
-ctx.fillStyle = "#b35900";
-ctx.fill();
-ctx.restore();
-
-//scale
-ctx.save();
-ctx.rotate(0* Math.PI / 180);
-ctx.beginPath();
-ctx.rect(170,50, 5, 35);
-ctx.fillStyle = "#2d50b9";//scale color
-ctx.fill();
-ctx.restore();
 
 //base support
 rctx.save();
@@ -182,11 +125,88 @@ ctx.lineTo(350,90);
 ctx.stroke();
 ctx.restore();
 
-
+setTimeout(vernierWithScale ,1000);
+setTimeout(drawBaffel ,2000);
 
 
 //funtions to be called for replacing weirs on hydralic bench
-setTimeout(display_Vweir,1000);
+//setTimeout(display_Vweir,1000);
+}
+
+
+function vernierWithScale(argument) {
+
+
+    document.getElementById("note").innerHTML = "vernier scale placed on hydralic bench";
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var vernier =c.getContext("2d");
+
+//line which touches water flow hook
+    ctx.save();
+    ctx.moveTo(187,76);
+    ctx.lineTo(187,130);
+    ctx.stroke();
+    ctx.restore();
+
+
+    //support for adjuster
+    ctx.save();
+    ctx.moveTo(185,30);
+    ctx.lineTo(195,30);
+    ctx.stroke();
+    ctx.restore();
+
+    
+    //scale
+    ctx.save();
+    ctx.rotate(0* Math.PI / 180);
+    ctx.beginPath();
+    ctx.rect(170,50, 5, 35);
+    ctx.fillStyle = "#2d50b9";//scale color
+    ctx.fill();
+    ctx.restore();
+
+
+    //adjuster
+    ctx.save();
+    ctx.rotate(0* Math.PI / 180);
+    ctx.beginPath();
+    ctx.rect(195,27, 5, 5);
+    ctx.fillStyle = "#b35900";
+    ctx.fill();
+    ctx.restore();
+
+    //support for vernier with wood
+    ctx.save();
+    ctx.rotate(0* Math.PI / 180);
+    ctx.beginPath();
+    ctx.rect(160,83, 50, 5);
+    ctx.fillStyle = "#ff9933";
+    ctx.fill();
+    ctx.restore();
+
+
+    //vernier
+    ctx.save();
+    ctx.rotate(0* Math.PI / 180);
+    ctx.beginPath();
+    ctx.rect(185,20, 5,65); //part of vernier
+    ctx.fillStyle = "#b35900"; 
+    ctx.fill();
+    ctx.restore();
+
+
+    //connection between scale and support
+    ctx.save();
+    ctx.rotate(0* Math.PI / 180);
+    ctx.beginPath();
+    ctx.rect(165,50, 25,5);
+    ctx.fillStyle = "#b35900"; 
+    ctx.fill();
+
+
 }
 
 
@@ -224,4 +244,20 @@ function drawCylinder(cy, x, y, w, h) {
     cy.lineTo(x + w, y + h - h / 8);
 
     cy.stroke();
+}
+
+function drawBaffel(argument) {
+
+    document.getElementById("note").innerHTML = "Place baffel on hydralic bench which allows laminar flow of water";
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    ctx.save();
+    //ctx.rotate(4* Math.PI / 180);
+    ctx.beginPath();
+    ctx.rect(100,93, 60, 65);
+    ctx.fillStyle = "#CDC5BB";//baffel
+    ctx.fill();
+    ctx.restore();
 }

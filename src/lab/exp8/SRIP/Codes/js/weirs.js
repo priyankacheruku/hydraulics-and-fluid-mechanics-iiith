@@ -1,35 +1,43 @@
 //Script file for simulaton of weirs one after another
 function display_Vweir(){
 
-	 var c = document.getElementById("myCanvas");
-	 var weir =c.getContext("2d");
-	
-	 document.getElementById("weir3").style.display = "none";
-//v-shaped weir	
+	experiment();
 
-	clearweir();
-	weir.save();
-	weir.beginPath();
-	weir.moveTo(370,100);//lefthand to right
-	weir.lineTo(370,175);//vertical
-	weir.lineTo(410,170);//horizontal below
-	weir.lineTo(410,95);//vertical
-	weir.lineTo(395,98);//horizontal
-	weir.lineTo(390,140);//slant
-	weir.lineTo(385,99);//slant
-	weir.lineTo(370,100);//horizontal
-//to fill the space in the shape
-	weir.fillStyle = "lime";
-	weir.fill(); 
-//stroke style
-	weir.strokeStyle = "purple";
-	weir.stroke();
-	weir.restore();
-setTimeout(drawflow,1000);
+	setTimeout(weirV,3000);
+
+	function weirV(argument) {
+
+		var c = document.getElementById("myCanvas");
+	 	var weir =c.getContext("2d");
+	
+	 	document.getElementById("weir3").style.display = "none";
+
+	 	document.getElementById("note").innerHTML = "Place v-notch weir on hydralic bench";
+
+//v-shaped weir	
+		clearweir();
+		weir.save();
+		weir.beginPath();
+		weir.moveTo(370,100);//lefthand to right
+		weir.lineTo(370,175);//vertical
+		weir.lineTo(410,170);//horizontal below
+		weir.lineTo(410,95);//vertical
+		weir.lineTo(395,98);//horizontal
+		weir.lineTo(390,140);//slant
+		weir.lineTo(385,99);//slant
+		weir.lineTo(370,100);//horizontal
+	//to fill the space in the shape
+		weir.fillStyle = "lime";
+		weir.fill(); 
+	//stroke style
+		weir.strokeStyle = "purple";
+		weir.stroke();
+		weir.restore();
+		setTimeout(drawflow,2000);
 //setTimeout(clearflow,9000);
 //rectangular weir
 //setTimeout(display_Rweir,18000);
-
+	}
 }
 
 

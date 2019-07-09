@@ -43,7 +43,7 @@
 		</button>
 
  
-		<button class="btn" name="start" id="start" onclick="experiment();">
+		<button class="btn" name="start" id="start" onclick="display_Vweir();">
 			<img src="images/start.png">
 			<span id="st">Start</span>
 		</button>
@@ -64,14 +64,14 @@
 		<h3>Weirs Test</h3>
 				
 
-				<div class="scene" >
+			<div class="scene" >
   					
-   				
+  <div>				
  <span style="font-size:10px;text-align:left;color: blue;">rectangular and triangular weirs</span>
  <div id="weir1"  style="display: inline-block;">
 
 <svg height="100" width="112">
-  <polygon points="11 96,111 94,108 50,73 49,74 11,9 13" style="fill:lime;stroke:purple;stroke-width:1" />
+	 <polygon points="11 96,111 94,108 50,73 49,74 11,9 13" style="fill:lime;stroke:purple;stroke-width:1" />
   Sorry, your browser does not support inline SVG.
 </svg>
 </div>
@@ -88,28 +88,22 @@
   Sorry, your browser does not support inline SVG.
 </svg>
 </div>
-
-
-
-
-
-<canvas id="myCanvas" width=800 height="325" ></canvas>
-<!--<canvas id="cylinder" width="110" height="110" style="border:1px solid #d3d3d3;"></canvas>-->
-<!--simulation-->
-
-	
-
+</div>
 
 
 	
+		<canvas id="myCanvas" width=800 height="325" ></canvas>
+	
+		<div class="note" id="note"></div>
+
+
+
 			</div><!--scene-->
-	</div>
+	</div><!--container-->
 	
 
-
-
-
-
+<br>
+<br>
 
 		<!-- buttons below -->
 	<div class="whitesmoke_color">
@@ -123,7 +117,6 @@
 			</button>
 		-->
 
-			
 					<input type="checkbox" name="inputParameter" id="inputParameter" onclick="checkbox()">
 					<img src="images/tasklist.png">
 					Show input Parameters 
