@@ -3,6 +3,9 @@ function experiment(argument) {
     // body...
 
     //document.getElementById("st").innerHTML = "Stop";
+
+
+
     document.getElementById("start").style.display = "none";
     document.getElementById("stop").style.display = "inline-block";
 
@@ -99,22 +102,8 @@ front_rect.restore();
 
 
 //out let water container sump
-//var cylinder=document.getElementById("cylinder");
-
 var cyl =c.getContext("2d");
-
 cyl.save();
-cyl.beginPath();
-/*
-drawCylinder(cyl ,405,240,90,63);//water level in sump 
-cyl.fillStyle="blue";
-cyl.fill();
-
-cyl.beginPath();
-cyl.rect(405,245,90,52); //to display blue in cylinder
-cyl.fillStyle= "blue";
-cyl.fill();
-*/
 drawCylinder(cyl ,400,210,100,100);//sump to stote
 cyl.restore();
 
@@ -128,25 +117,21 @@ ctx.restore();
 setTimeout(vernierWithScale ,1000);
 setTimeout(drawBaffel ,2000);
 
-
-//funtions to be called for replacing weirs on hydralic bench
-//setTimeout(display_Vweir,1000);
 }
 
 
 function vernierWithScale(argument) {
 
-
     document.getElementById("note").innerHTML = "vernier scale placed on hydralic bench";
 
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-    var vernier =c.getContext("2d");
+    //var vernier =c.getContext("2d");
 
 //line which touches water flow hook
     ctx.save();
     ctx.moveTo(187,76);
-    ctx.lineTo(187,130);
+    ctx.lineTo(187,120);
     ctx.stroke();
     ctx.restore();
 
@@ -256,8 +241,9 @@ function drawBaffel(argument) {
     ctx.save();
     //ctx.rotate(4* Math.PI / 180);
     ctx.beginPath();
-    ctx.rect(100,93, 60, 65);
+    ctx.rect(100,100, 60, 58);
     ctx.fillStyle = "#CDC5BB";//baffel
     ctx.fill();
     ctx.restore();
+
 }

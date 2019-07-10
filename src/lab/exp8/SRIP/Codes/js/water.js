@@ -35,11 +35,10 @@ function drawflow() {
   		w.restore();
   	
 	}
-	setTimeout(drawcylwater,5000);
-  setTimeout(drawFlowWater,3000);
+	
 }	
 
-
+/*
 function clearflow() {
 	var c = document.getElementById("myCanvas");
 	var w =c.getContext("2d");
@@ -78,12 +77,15 @@ function clearflow() {
 	}
 	
 }
+*/
+
+
 function drawcylwater(argument) {
   var c = document.getElementById("myCanvas");
   var w =c.getContext("2d");
   var cyl =c.getContext("2d");
-  //var i=0;
-//Configuration
+  
+  //Configuration
   var myRect = {"x":405,"y":245,"w":90,"h":58}  //rect definition
   timeInterval= 100;          //time between 2 draw
   thick = 3;             //thickness of a line (pixel)
@@ -91,7 +93,7 @@ function drawcylwater(argument) {
 
   var cpt = 0;
 
-//loop will process fast but we make a delay on each draw with setTimeout which grow at each iteration
+  //loop will process fast but we make a delay on each draw with setTimeout which grow at each iteration
   for(var ind = thick; ind < myRect.h+thick ; ind += thick){
     //w.rotate(4* Math.PI / 180);
       setTimeout(function(ind){
@@ -108,30 +110,25 @@ function drawcylwater(argument) {
         tempY = myRect.y
       }
       w.save();
-      //w.rotate((4)* Math.PI / 180);
       w.fillStyle = " #1ca3ec"; //color of the rect
       w.fillRect(myRect.x, tempY,  myRect.w, thick);
-   
-      w.restore();
-   
+      w.restore();   
      }
-  /*
-  cyl.beginPath()
-  drawCylinder(cyl ,405,240,90,63);//water level in sump 
-  cyl.fillStyle="#1ca3ec";
-  cyl.fill();
-  */
 }
-
-
-
-
 
 
 function drawFlowWater(argument) {
   var c = document.getElementById("myCanvas");
   var l =c.getContext("2d");
   animatePathDrawing(l,392, 120, 450, 200, 450,300,2000);
+
+}
+
+
+function drawFlowWaterE(argument) {
+  var c = document.getElementById("myCanvas");
+  var l =c.getContext("2d");
+  animatePathDrawing(l,400, 120, 450, 200, 450,300,2000);
 
 }
 
@@ -157,8 +154,6 @@ function animatePathDrawing(ctx, x0, y0, x1, y1, x2, y2, duration) {
     
     window.requestAnimationFrame(step);
 }
-
-
 
 
 /**
