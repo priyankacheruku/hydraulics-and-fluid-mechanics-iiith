@@ -129,11 +129,14 @@ function checkbox() {
 
 //to display input values and calculated values
 function show(){
-  
+    
+    if(x==3){
+      alert("only 3 observation acceptable")
+    }
        //document.getElementById("sh").style.display=block;
        document.getElementById("sh").innerHTML = "length is  " + inputValues.len+"<br>height is" + 
-       inputValues.hei+"<br>cofficient of discharge is" +
-       inputValues.cof+"<br>area is" + inputValues.are;
+       inputValues.hei+"<br>Cofficient of discharge is " +
+       inputValues.cof+"<br>Area is " + inputValues.are;
       
        //caverting string to integer
        var l=parseInt(inputValues.len);
@@ -161,10 +164,11 @@ function show(){
        outputValues.H=parseFloat(h+hv).toFixed(2);
        //qv is flow of water with velocity for total height
        outputValues.qv= parseFloat(1.71*c*l*(Math.pow(outputValues.H,3/2)-Math.pow(hv,3/2))).toFixed(2);
-       document.getElementById("q_value").innerHTML = "q value without velocity"+q+"<br> q value with velocity is "+ outputValues.qv+"h value"+outputValues.H;
+       document.getElementById("q_value").innerHTML = "<hr>q value without velocity "+q+"<br> q value with velocity is  "+ outputValues.qv+"<br>height  value  "+outputValues.H+"<hr>";
 
        add_element_to_array();
        display_array();
+
 }
 
 
@@ -190,11 +194,12 @@ function add_element_to_array()
 function display_array()
 {
 
-      var e = "OBSERVATION TABLE<hr/>";   
-      e+="OBSERVATION&nbsp;&nbsp;" + "No&nbsp;&nbsp;"+ "Height" +"&nbsp;&nbsp;"+" qv"+"<hr/>"
+      var e = "OBSERVATION TABLE";   
+      e+="<table><tr> <th>OBSERVATION No</th> <th>Height</th> <th>qv</th> </tr>"
      for (var y=0; y<x; y++){
 
-        e += "OBSERVATION "+ y+ "&nbsp;&nbsp;"+ arr[y][0] +"&nbsp;&nbsp;"+arr[y][1]+"<br/>";
+        e += "<tr> <td>"+ y+ "</td>  <td>"+ arr[y][0] +"</td> <td>"+arr[y][1]+"</td></tr>";
       }
+      e+="</table></centre>"
       document.getElementById("Result").innerHTML =e;
 }

@@ -1,7 +1,4 @@
 @import url('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css');
-@import url("parameter.css");
-/*@import url("graph.css");
-
 
 /*main part*/
 .container{
@@ -76,4 +73,56 @@
 
 .parameters{
   display: none;
+}
+
+.slidecontainer {
+  margin-top:10px;
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+table,tr,td,th{
+  border: 1px solid blue;
+  text-align: center;
+  
+}
+th ,td{
+  padding:10px;
 }

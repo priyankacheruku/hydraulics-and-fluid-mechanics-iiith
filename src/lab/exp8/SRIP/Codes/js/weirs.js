@@ -1,11 +1,58 @@
 //Script file for simulaton of weirs one after another
+
 function display_Vweir(){
 
 	experiment();
+	setTimeout(vernierWithScale,1000);// in experiment.js
+	setTimeout(drawBaffel ,2000);
 	setTimeout(weirV,3000);
+	//water flow
+	setTimeout(drawFlow,5000);
+	setTimeout(drawFlowWater,8000);
+	setTimeout(drawcylwater,10000);
+	setTimeout(observeReadings,13000);
 
-	function weirV(argument) {
-	
+	//rectangular weir
+	setTimeout(display_Rweir,15000);
+
+}
+
+function display_Rweir(){
+
+	var c = document.getElementById("myCanvas");
+   	
+	experiment();
+	setTimeout(vernierWithScale ,1000);
+	setTimeout(drawBaffel ,2000);
+	setTimeout(weirR,3000);
+	setTimeout(drawFlow,5000);
+	setTimeout(drawFlowWater,9000);
+	setTimeout(drawcylwater,11000);
+	setTimeout(observeReadings,14000);
+		
+	//edge weir
+	setTimeout(display_Eweir,16000);
+
+}
+
+
+function display_Eweir(){
+
+    experiment();
+    setTimeout(vernierWithScale ,1000);
+	setTimeout(drawBaffel ,2000);
+    setTimeout(weirE,3000);
+    setTimeout(drawFlow,4000);
+	setTimeout(drawFlowWaterE,8000);
+	setTimeout(drawcylwater,10000);
+	setTimeout(observeReadings,13000);
+	setTimeout(simulatonComplete,15000);
+    
+}
+
+
+function weirV(argument) {
+		
 	 	document.getElementById("weir3").style.display = "none";
 
 	 	document.getElementById("note").innerHTML = "Place v-notch weir on hydralic bench";
@@ -31,37 +78,13 @@ function display_Vweir(){
 		weir.strokeStyle = "purple";
 		weir.stroke();
 		weir.restore();
-
-		//water flow
-		setTimeout(drawflow,2000);
-		setTimeout(drawFlowWater,5000);
-		setTimeout(drawcylwater,7000);
-		setTimeout(observeReadings,10000);
-		//rectangular weir
-		setTimeout(display_Rweir,12000);//11
-	}
-	
+		
 }
 
 
-function display_Rweir(){
+function weirR(argument) {
 
-
-	var c = document.getElementById("myCanvas");
-    const context = c.getContext('2d');
-    //context.save();
-    context.clearRect(0, 0, c.width, c.height);
-    //context.restore();
-    context.beginPath();
-	
-	experiment();
-	//clearweir();
-
-	setTimeout(weirR,1000);
-
-	function weirR(argument) {
-
-		//var c = document.getElementById("myCanvas");
+		var c = document.getElementById("myCanvas");
 		var weir =c.getContext("2d");
 
 		document.getElementById("weir2").style.display = "none";
@@ -69,7 +92,7 @@ function display_Rweir(){
 
 		document.getElementById("note").innerHTML = "Place rectangular-notch weir on hydralic bench";
 
-				//rectangular weir
+		//rectangular weir
 		weir.save();
 		weir.beginPath();
 		weir.moveTo(370,100);//lefthand to right
@@ -88,92 +111,52 @@ function display_Rweir(){
 		weir.strokeStyle = "purple";
 		weir.stroke();
 		weir.restore();
-
-		setTimeout(drawflow,2000);
-		setTimeout(drawFlowWater,6000);
-		setTimeout(drawcylwater,8000);
-		setTimeout(observeReadings,11000);
-		//setTimeout(clearflow,9000);
-
-		//edge weir
-		setTimeout(display_Eweir,13000); 
-	}
-
-}
-function display_Eweir(){
-
-	var c = document.getElementById("myCanvas");
-    const context = c.getContext('2d');
-    //context.save();
-    context.clearRect(0, 0, c.width, c.height);
-    //context.restore();
-    context.beginPath();
-
-    experiment();
-    setTimeout(weirE,1000);
-    function weirE(argument) {
-   
-		var c = document.getElementById("myCanvas");
-		var weir =c.getContext("2d");
-
-		document.getElementById("weir1").style.display = "none";
-		document.getElementById("weir2").style.display = "inline-block";
-
-		document.getElementById("note").innerHTML = "Place edge-notch weir on hydralic bench";
-
-//edge weir
-		weir.save();
-		weir.beginPath();
-		weir.moveTo(370,100);//lefthand to right
-		weir.lineTo(370,175);//vertical
-		weir.lineTo(410,170);//horizontal below
-		weir.lineTo(410,125);//vertical
-		weir.lineTo(395,125);//horizontal
-		weir.lineTo(395,100);//vertical
-		
-		weir.lineTo(370,100);//horizontal
-//to fill the space in the shape
-		weir.fillStyle = "lime";
-		weir.fill(); 
-//stroke style
-		weir.strokeStyle = "purple";
-		weir.stroke();
-		weir.restore(); 
-
-		setTimeout(drawflow,2000);
-		setTimeout(drawFlowWaterE,6000);
-		setTimeout(drawcylwater,8000);
-		setTimeout(observeReadings,11000);
-	}
+ 
 }
 
-//clear weir canvas 
-function clearweir(){
 
-
-	var c = document.getElementById("myCanvas");
+function weirE(argument) {
+   		
+   	var c = document.getElementById("myCanvas");
 	var weir =c.getContext("2d");
 
+	document.getElementById("weir1").style.display = "none";
+	document.getElementById("weir2").style.display = "inline-block";
+
+	document.getElementById("note").innerHTML = "Place edge-notch weir on hydralic bench";
+
+	//edge weir
 	weir.save();
 	weir.beginPath();
 	weir.moveTo(370,100);//lefthand to right
-	weir.lineTo(372,172);//vertical
+	weir.lineTo(370,175);//vertical
 	weir.lineTo(410,170);//horizontal below
-	weir.lineTo(410,95);//vertical
-	weir.lineTo(395,95);//horizontal
-	
+	weir.lineTo(410,125);//vertical
+	weir.lineTo(395,125);//horizontal
+	weir.lineTo(395,100);//vertical
+		
+	weir.lineTo(370,100);//horizontal
 //to fill the space in the shape
-	weir.fillStyle = "white";
+	weir.fillStyle = "lime";
 	weir.fill(); 
 //stroke style
-	weir.strokeStyle = "white";
+	weir.strokeStyle = "purple";
 	weir.stroke();
-	weir.restore();
-
-	//drawblue();
+	weir.restore(); 
+		
 }
 
 
 function observeReadings(argument) {
+
 	document.getElementById("note").innerHTML = "Adjust the hook scale that its apex touches water and observe the readings.<br>Repeat experiment to get accurate values";
+
+}
+
+
+function simulatonComplete(argument) {
+	
+	document.getElementById("note").innerHTML = "simulaton completed use restart button to observe again";
+	document.getElementById("stop").style.display="none";
+
 }

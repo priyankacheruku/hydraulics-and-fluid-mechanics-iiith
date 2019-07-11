@@ -1,11 +1,6 @@
-//script for 2d canavas  to represent simulation
-function experiment(argument) {
-    // body...
-
-    //document.getElementById("st").innerHTML = "Stop";
-
-
-
+//script for 2d canavas  to represent simulation 
+function experiment() {
+   
     document.getElementById("start").style.display = "none";
     document.getElementById("stop").style.display = "inline-block";
 
@@ -13,109 +8,111 @@ function experiment(argument) {
     document.getElementById("note").innerHTML = "hydralic bench";
 
     var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    //var vernier =c.getContext("2d");
 
+    const context = c.getContext('2d');    
+    context.clearRect(0, 0, c.width, c.height);
+    context.beginPath();
+    
+    var ctx = c.getContext("2d");
+
+    //var vernier =c.getContext("2d");
+    ctx.beginPath();
 
 
 //border of glass
-ctx.save();
-ctx.moveTo(68,70);
-ctx.lineTo(430,85);
-ctx.stroke();
-ctx.restore();
+    ctx.save();
+    ctx.moveTo(68,70);
+    ctx.lineTo(430,85);
+    ctx.stroke();
+    ctx.restore();
 
 
 
 //suport stands for hydralic bench
-ctx.save();
-ctx.beginPath();
-ctx.fillStyle="brown";
-ctx.fillRect(20, 180, 10, 100);
-ctx.fillRect(70, 185, 10, 100);
-ctx.fillRect(200, 190, 10, 110);
-ctx.fillRect(220, 190, 10, 110);
-ctx.fillRect(350, 200, 10, 110);
-ctx.fillRect(420, 195, 10, 110);
-ctx.restore();
+    ctx.save();
+    ctx.beginPath();
+    ctx.fillStyle="brown";
+    ctx.fillRect(20, 180, 10, 100);
+    ctx.fillRect(70, 185, 10, 100);
+    ctx.fillRect(200, 190, 10, 110);
+    ctx.fillRect(220, 190, 10, 110);
+    ctx.fillRect(350, 200, 10, 110);
+    ctx.fillRect(420, 195, 10, 110);
+    ctx.restore();
 
+    var rctx = c.getContext("2d");
 
-var rctx = c.getContext("2d");
+    rctx.save();
+    rctx.beginPath();
+    rctx.rect(68, 70, 15, 90);//side
+    rctx.fillStyle = "#cae2e7";
+    rctx.fill();
+    rctx.restore();
 
-rctx.save();
-rctx.beginPath();
-rctx.rect(68, 70, 15, 90);//side
-rctx.fillStyle = "#cae2e7";
-rctx.fill();
-rctx.restore();
+    rctx.save();
+    rctx.rotate(4 * Math.PI / 180);
+    rctx.beginPath();
+    rctx.rect(70, 130, 355, 30);//back base
+    rctx.fillStyle = "#ff5500";
+    rctx.fill();
+    rctx.restore();
 
-rctx.save();
-rctx.rotate(4 * Math.PI / 180);
-rctx.beginPath();
-rctx.rect(70, 130, 355, 30);//back base
-rctx.fillStyle = "#ff5500";
-rctx.fill();
-rctx.restore();
-
-rctx.save();
-rctx.beginPath();
-rctx.rect(20, 69, 50, 90);//BACKSIDE
-rctx.fillStyle = "#4e9daf";
-rctx.fill();
-rctx.restore();
+    rctx.save();
+    rctx.beginPath();
+    rctx.rect(20, 69, 50, 90);//BACKSIDE
+    rctx.fillStyle = "#4e9daf";
+    rctx.fill();
+    rctx.restore();
 
 
 //base support
-rctx.save();
-rctx.rotate(4* Math.PI / 180);
-rctx.beginPath();
-rctx.fillStyle="brown";
-rctx.rect(28, 150, 340, 30);
-rctx.fill();
-rctx.restore();
+    rctx.save();
+    rctx.rotate(4* Math.PI / 180);
+    rctx.beginPath();
+    rctx.fillStyle="brown";
+    rctx.rect(28, 150, 340, 30);
+    rctx.fill();
+    rctx.restore();
 
-//front view
-var front_rect=c.getContext("2d");
+    //front view
+    var front_rect=c.getContext("2d");
 
-front_rect.save();
-front_rect.rotate(-6* Math.PI / 180);
-front_rect.beginPath();
-front_rect.rect(330,210,80,30);
-front_rect.fillStyle ="brown";
-front_rect.fill();
-front_rect.restore();
+    front_rect.save();
+    front_rect.rotate(-6* Math.PI / 180);
+    front_rect.beginPath();
+    front_rect.rect(330,210,80,30);
+    front_rect.fillStyle ="brown";
+    front_rect.fill();
+    front_rect.restore();
 
-front_rect.save();
-front_rect.beginPath();
-front_rect.rect(350,90,20,90);
-front_rect.fillStyle ="brown";
-front_rect.fill();
-front_rect.restore();
+    front_rect.save();
+    front_rect.beginPath();
+    front_rect.rect(350,90,20,90);
+    front_rect.fillStyle ="brown";
+    front_rect.fill();
+    front_rect.restore();
 
 
-front_rect.save();
-front_rect.beginPath();
-front_rect.rect(410,85,20,90);//support for weir
-front_rect.fillStyle ="brown";
-front_rect.fill();
-front_rect.restore();
+    front_rect.save();
+    front_rect.beginPath();
+    front_rect.rect(410,85,20,90);//support for weir
+    front_rect.fillStyle ="brown";
+    front_rect.fill();
+    front_rect.restore();
 
 
 //out let water container sump
-var cyl =c.getContext("2d");
-cyl.save();
-drawCylinder(cyl ,400,210,100,100);//sump to stote
-cyl.restore();
+    var cyl =c.getContext("2d");
+    cyl.save();
+    drawCylinder(cyl ,400,210,100,100);//sump to stote
+    cyl.restore();
 
-// outer border of glass
-ctx.save();
-ctx.moveTo(20,70);
-ctx.lineTo(350,90);
-ctx.stroke();
-ctx.restore();
-
-setTimeout(vernierWithScale ,1000);
-setTimeout(drawBaffel ,2000);
+    // outer border of glass
+    ctx.save();
+    ctx.moveTo(20,70);
+    ctx.lineTo(350,90);
+    ctx.stroke();
+    ctx.restore();
 
 }
 
@@ -225,10 +222,12 @@ function drawCylinder(cy, x, y, w, h) {
             cy.lineTo(xPos, yPos);
         }
     }
+
     cy.moveTo(x + w, y + h / 8);
     cy.lineTo(x + w, y + h - h / 8);
 
     cy.stroke();
+
 }
 
 function drawBaffel(argument) {

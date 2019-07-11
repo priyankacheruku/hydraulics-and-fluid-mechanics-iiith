@@ -1,7 +1,6 @@
 function viewchart(){
 	
 	 var arr = JSON.parse(localStorage["array"]); 
-	 //alert(arr[0]);
 
 	var ch = document.getElementById("graph");
 	ch.style.display = "block";
@@ -39,5 +38,4 @@ function viewchart(){
 	
 	chart.render();
 	
-
 }
