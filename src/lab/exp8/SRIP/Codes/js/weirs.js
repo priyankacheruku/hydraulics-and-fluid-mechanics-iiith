@@ -1,5 +1,5 @@
 //Script file for simulaton of weirs one after another
-
+//var cl;
 function display_Vweir(){
 
 	experiment();
@@ -59,10 +59,9 @@ function weirV(argument) {
 
 	 	var c = document.getElementById("myCanvas");
 	 	var weir =c.getContext("2d");
-//v-shaped weir	
+		//v-shaped weir	
 		weir.save();
 		weir.beginPath();
-		
 		weir.moveTo(370,100);//lefthand to right
 		weir.lineTo(370,175);//vertical
 		weir.lineTo(410,170);//horizontal below
@@ -72,7 +71,7 @@ function weirV(argument) {
 		weir.lineTo(385,99);//slant
 		weir.lineTo(370,100);//horizontal
 	//to fill the space in the shape
-		weir.fillStyle = "lime";
+		weir.fillStyle = "#ffcd94";
 		weir.fill(); 
 	//stroke style
 		weir.strokeStyle = "purple";
@@ -92,6 +91,8 @@ function weirR(argument) {
 
 		document.getElementById("note").innerHTML = "Place rectangular-notch weir on hydralic bench";
 
+
+
 		//rectangular weir
 		weir.save();
 		weir.beginPath();
@@ -105,13 +106,13 @@ function weirR(argument) {
 		weir.lineTo(385,99);//
 		weir.lineTo(370,100);//horizontal
 		//to fill the space in the shape
-		weir.fillStyle = "lime";
+		weir.fillStyle = "#ffcd94";
 		weir.fill(); 
 		//stroke style
 		weir.strokeStyle = "purple";
 		weir.stroke();
 		weir.restore();
- 
+	
 }
 
 
@@ -137,7 +138,7 @@ function weirE(argument) {
 		
 	weir.lineTo(370,100);//horizontal
 //to fill the space in the shape
-	weir.fillStyle = "lime";
+	weir.fillStyle = "#ffcd94";
 	weir.fill(); 
 //stroke style
 	weir.strokeStyle = "purple";

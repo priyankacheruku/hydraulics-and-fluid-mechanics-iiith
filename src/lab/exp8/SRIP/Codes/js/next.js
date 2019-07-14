@@ -1,12 +1,13 @@
 //script for next button
-var count=0;
+var count=1;
+
 function next(argument) {
-	
+	//clearTimeout(cl);
 	//counter will increase for every onclick
 	count+=1;
-	
+	//alert();
 	switch (parseInt(count)) {
-		case 1: case 7: case 13:
+		case 7: case 13:
 			experiment();break;
   		case 2: case 8: case 14:
   			vernierWithScale();break;
@@ -36,12 +37,12 @@ function displayWater(argument) {
 	var cyl =c.getContext("2d");
 	cyl.save();
 	cyl.beginPath();
-	drawCylinder(cyl ,405,240,90,63);//water level in sump 
+	drawCylinder(cyl ,445,240,90,63);//water level in sump 
 	cyl.fillStyle="#1ca3ec";
 	cyl.fill();
 
 	cyl.beginPath();
-	cyl.rect(405,245,90,52); //to display blue in cylinder
+	cyl.rect(445,245,90,52); //to display blue in cylinder
 	cyl.fillStyle= "#1ca3ec";
 	cyl.fill();
 	cyl.restore();
@@ -62,7 +63,15 @@ function displayWater(argument) {
 	    w.beginPath();
 	    w.strokeStyle = "#1ca3ec";
 	    w.lineWidth = 15;
-    	w.bezierCurveTo(392, 120, 450, 200, 450,300);
+    	w.bezierCurveTo(392, 120, 480, 200, 470,300);
+    	//w.bezierCurveTo(414, 140, 500, 225, 480,300);
+    	w.stroke();
+    	w.restore();
+    	w.save();
+	    w.beginPath();
+	    w.strokeStyle = "#1ca3ec";
+	    w.lineWidth = 15;
+    	w.bezierCurveTo(410, 140, 500, 225, 480,300);
     	w.stroke();
     	w.restore();
 	}
@@ -72,7 +81,14 @@ function displayWater(argument) {
 	    w.beginPath();
 	    w.strokeStyle = "#1ca3ec";
 	    w.lineWidth = 15;
-    	w.bezierCurveTo(400, 120, 450, 200, 450,300);
+    	w.bezierCurveTo(400, 120, 480, 200, 470,300);
+    	w.stroke();
+    	w.restore();
+    	w.save();
+	    w.beginPath();
+	    w.strokeStyle = "#1ca3ec";
+	    w.lineWidth = 15;
+    	w.bezierCurveTo(418,140, 500, 225,480,300);
     	w.stroke();
     	w.restore();
 

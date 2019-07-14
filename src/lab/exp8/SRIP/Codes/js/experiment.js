@@ -1,6 +1,8 @@
 //script for 2d canavas  to represent simulation 
+  
 function experiment() {
-   
+
+    document.getElementById("shapes").style.display = "inline-block";
     document.getElementById("start").style.display = "none";
     document.getElementById("stop").style.display = "inline-block";
 
@@ -9,7 +11,7 @@ function experiment() {
 
     var c = document.getElementById("myCanvas");
 
-    const context = c.getContext('2d');    
+    const context = c.getContext('2d');   
     context.clearRect(0, 0, c.width, c.height);
     context.beginPath();
     
@@ -104,7 +106,7 @@ function experiment() {
 //out let water container sump
     var cyl =c.getContext("2d");
     cyl.save();
-    drawCylinder(cyl ,400,210,100,100);//sump to stote
+    drawCylinder(cyl,440,210,100,100);//sump to stote
     cyl.restore();
 
     // outer border of glass
@@ -182,7 +184,7 @@ function vernierWithScale(argument) {
 
     //connection between scale and support
     ctx.save();
-    ctx.rotate(0* Math.PI / 180);
+    //ctx.rotate(0* Math.PI / 180);
     ctx.beginPath();
     ctx.rect(165,50, 25,5);
     ctx.fillStyle = "#b35900"; 

@@ -15,7 +15,7 @@
 	<script type="text/javascript" src="js/weirs.js"> </script>
 	<script type="text/javascript" src="js/experiment.js"></script>
 	<script type="text/javascript" src="js/water.js"></script>
-
+	<!--<script type="text/javascript" src="js/next.js"></script>-->
 	<title>weirs experiment</title>
 </head>
 <body>
@@ -27,22 +27,13 @@
 </script>
 <div class="container">
 
+	<div class="black_color">
+		<h3>Weirs Test</h3>
+	</div>
 <!-- buttons above -->
 	<div class="white_color"> 
-	
-		<button class="btn" name="graph" onclick="window.open('graph.html',
-			'popUpWindow',
-			'height=500,width=500,left=300,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
-			<img src="images/graph_window.png">
-			Full View Graph
-		</button>
+		
 
-		<button class="btn" name="restart" onclick="window.location.reload();" >
-			<img src="images/restart.png">
-			Restart
-		</button>
-
- 
 		<button class="btn" name="start" id="start" onclick="display_Vweir();">
 			<img src="images/start.png">
 			<span id="st">Start</span>
@@ -53,84 +44,76 @@
 			stop
 		</button>
 
-		<button class="btn" name="next" onclick="window.location='next.html';">
+		<button class="btn" name="next" id="next" onclick="window.location='next.html';">
 			<img src="images/next.png">
 			Next
 		</button>
-			</div>
+
+		<button class="btn" name="restart" onclick="window.location.reload();" >
+			<img src="images/restart.png">
+			Restart
+		</button>
 
 
-	<div class="black_color">
-		<h3>Weirs Test</h3>
+		
+	</div><!--buttons-->
+
+
 				
 
-			<div class="scene" >
+	<div class="scene" >
   					
-  <div>				
- <span style="font-size:10px;text-align:left;color: blue;">rectangular and triangular weirs</span>
- <div id="weir1"  style="display: inline-block;">
+ 		<div class="shapes" id="shapes">				
+ 			<span style="font-size:10px;text-align:left;color: blue;"> rectangular and triangular weirs</span>
+ 			<div id="weir1"  style="display: inline-block;">
+				<svg height="100" width="112">
+	 			<polygon points="11 96,111 94,108 50,73 49,74 11,9 13" style="fill:#ffcd94;stroke:purple;stroke-width:1" />
+  					Sorry, your browser does not support inline SVG.
+				</svg>
+			</div>
 
-<svg height="100" width="112">
-	 <polygon points="11 96,111 94,108 50,73 49,74 11,9 13" style="fill:lime;stroke:purple;stroke-width:1" />
-  Sorry, your browser does not support inline SVG.
-</svg>
-</div>
-
-<div  id="weir2" style="display: inline-block;">
-<svg height="110" width="120">
-  <polygon points="29 105,117 103,112 13,84 12,81 45,59 44,56 15,26 13" style="fill:lime;stroke:purple;stroke-width:1" />
-  Sorry, your browser does not support inline SVG.
-</svg>
-</div>
-<div  id="weir3" style="display:inline-block;">
-<svg height="100" width="128">
-  <polygon points="26 94,126 92,125 11,87 12,72 44,73 47,54 13,24 11" style="fill:lime;stroke:purple;stroke-width:1" />
-  Sorry, your browser does not support inline SVG.
-</svg>
-</div>
-</div>
+			<div  id="weir2" style="display: inline-block;">
+				<svg height="110" width="120">
+  				<polygon points="29 105,117 103,112 13,84 12,81 45,59 44,56 15,26 13" style="fill:#ffcd94;stroke:purple;stroke-width:1" />
+  					Sorry, your browser does not support inline SVG.
+				</svg>
+			</div>
+			<div  id="weir3" style="display:inline-block;">
+				<svg height="100" width="128">
+				<polygon points="26 94,126 92,125 11,87 12,72 44,73 47,54 13,24 11" style="fill:#ffcd94;stroke:purple;stroke-width:1" />
+	  				Sorry, your browser does not support inline SVG.
+				</svg>
+			</div>
+		</div>
 
 
 	
-		<canvas id="myCanvas" width=800 height="325" ></canvas>
+		<div class="experiment"><canvas id="myCanvas" width=800 height="325" ></canvas></div>
 	
-		<div class="note" id="note"></div>
+		<center><div class="note" id="note"></div></center>
 
+	</div><!--scene-->
 
-
-			</div><!--scene-->
-	</div><!--container-->
-	
-
-<br>
-<br>
-
-		<!-- buttons below -->
+	<!-- checkbox below -->
 	<div class="whitesmoke_color">
-		<!--	<button class="btn" name="h-view">
-				<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/h-view.png">
-				Horizontal View
-			</button>
-			<button class="btn" name="v-view">
-				<img src="/home/user/hydraulics-and-fluid-mechanics-iiith/src/lab/exp8/SRIP/Libraries/resources/icons/v-view.png">
-				Vertical View
-			</button>
-		-->
 
-					<input type="checkbox" name="inputParameter" id="inputParameter" onclick="checkbox()">
-					<img src="images/tasklist.png">
-					Show input Parameters 
+		<input type="checkbox" name="inputParameter" id="inputParameter" onclick="checkbox()">
+		<img src="images/tasklist.png">
+		Show input Parameters 
 	
-			
+		<input type="checkbox" name="show_graph"  id="show_graph"  onclick="checkbox2()">
+		<img src="images/show_graph.png">
+		<span >Show Graph</span>
 
-					<input type="checkbox" name="show_graph"  id="show_graph"  onclick="checkbox2()">
-					<img src="images/show_graph.png">
-					<span >Show Graph</span>
+		<button class="btn" name="graph" onclick="window.open('graph.html',
+			'popUpWindow',
+			'height=350,width=500,left=300,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
+			<img src="images/graph_window.png">
+			Full View Graph
+		</button>
+
 	</div>
-
-
-
-
+		
 <!-----------for input parameters-------------------------------------->
 	<div class="parameters" id="parameters" >
 		<!--for input parameters" -->
@@ -155,8 +138,8 @@
 		<div id="sh" >
 			press button to calculate 
 		</div>	
-			<div ><p id="q_value"><p>
-			<center><div id="Result"></div></center>
+		<div ><p id="q_value"><p>
+			<center>	<div id="Result"></div>	</center>
 		</div>
 	</div>
 <!-------------------------------------------input paramerters division closed ---------------------------->
@@ -164,10 +147,6 @@
 
 
 	<div id="chartContainer" style="height: 300px; width: 100% display:none;"></div>
-
-	
-
-
 
 </div>
 

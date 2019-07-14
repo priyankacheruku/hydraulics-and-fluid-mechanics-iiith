@@ -1,3 +1,4 @@
+var i=0;
 function drawFlow() {
 
   document.getElementById("note").innerHTML = "Supply water through pump";
@@ -29,7 +30,7 @@ function drawFlow() {
     		tempY = myRect.y
   		}
   		w.save();
-  		w.rotate((4)* Math.PI / 180);
+  		w.rotate(4* Math.PI / 180);
   		w.fillStyle = "	#1ca3ec"; //color of the rect
   		w.fillRect(myRect.x, tempY,  myRect.w, thick); 
   		w.restore();
@@ -45,7 +46,7 @@ function drawcylwater(argument) {
   var cyl =c.getContext("2d");
   
   //Configuration
-  var myRect = {"x":405,"y":245,"w":90,"h":58}  //rect definition
+  var myRect = {"x":445,"y":245,"w":90,"h":58}  //rect definition
   timeInterval= 100;          //time between 2 draw
   thick = 3;             //thickness of a line (pixel)
   //w.fillStyle = "blue";  //color of the rect
@@ -79,16 +80,22 @@ function drawcylwater(argument) {
 function drawFlowWater(argument) {
   var c = document.getElementById("myCanvas");
   var l =c.getContext("2d");
-  animatePathDrawing(l,392, 120, 450, 200, 450,300,2000);
-
+  animatePathDrawing(l,392, 120, 480, 200, 470,300,2000);
+  setTimeout(x,500);
+  function x(argument) {
+    animatePathDrawing(l,414,140, 500, 225,480,300,1500);
+  }
 }
 
 
 function drawFlowWaterE(argument) {
   var c = document.getElementById("myCanvas");
   var l =c.getContext("2d");
-  animatePathDrawing(l,400, 120, 450, 200, 450,300,2000);
-
+  animatePathDrawing(l,400, 120, 480, 200, 470,300,2000);
+  setTimeout(x,500);
+  function x(argument) {
+    animatePathDrawing(l,418,140, 500, 225,480,300,1500);
+  }
 }
 
 
@@ -129,11 +136,12 @@ function animatePathDrawing(ctx, x0, y0, x1, y1, x2, y2, duration) {
  * @param t1        The start ratio of the splitted bezier from 0.0 to 1.0
  */
 function drawBezierSplit(ctx, x0, y0, x1, y1, x2, y2, t0, t1) {
+
       ctx.save();
       ctx.beginPath();
       ctx.strokeStyle = "#1ca3ec";
       ctx.lineWidth = 15;
-     
+      //i=i+1;
       if( 0.0 == t0 && t1 == 1.0 ) {
             ctx.moveTo( x0, y0 );
             ctx.quadraticCurveTo( x1, y1, x2, y2 );

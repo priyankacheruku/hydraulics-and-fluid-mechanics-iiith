@@ -6,27 +6,24 @@
  	margin-left: auto;
 	margin-right: auto;
   width:70%;
-  height: 600px;
-
+  height: 800px;
 }
 
 /* buttons */
 .white_color{
 	background-color:#F5F5F5;
-	padding-left:  200px;  
+	padding-left:300px;  
 }
 
 
 /* Style buttons */
 .btn {
-
   background-color: #80ccff;
   border: none; /* Remove borders */
   color: black; /* White text */
   padding: 5px 10px 5px 2px; /* Some padding */
   font-size: 16px; /* Set a font size */
   margin-left: 5px;
- /* cursor: pointer;  Mouse pointer on hover */
 }
 
 
@@ -36,11 +33,10 @@
 	text-align: center;
 	color: #f7d92e;
 	font-size: 16px;
-	height: 500px;
+	
 	width: 100%;
   
 }
-
 
 .showresult{
 
@@ -56,19 +52,26 @@
   background-color: white;
   border: 2px solid red;
 }
+.shapes{
+  display: none;
+  margin-left: 50px;
+  height: 110;
+}
+.experiment{
+  margin-left: 100px;
+}
 .note{
  /* text-align: center;*/
- display: none;
-  
+  display: none;
   border: 2px solid blue;
   border-radius: 5px;
   color: blue;
 }
 
-/*buttons and checkbox */
+/*checkbox */
 .whitesmoke_color{
-	background-color: 	#F5F5F5;
-	padding-left:  250px;
+	background-color:#F5F5F5;
+	padding-left:  200px;
 }
 
 .parameters{
