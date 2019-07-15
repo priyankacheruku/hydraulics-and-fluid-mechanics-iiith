@@ -102,7 +102,8 @@ function complete(argument) {
 	alert("experiment completed");
 	document.getElementById("next").disabled = true;
 	document.getElementById("note").innerHTML = "use restart button to observe again";
-	document.getElementById("stop").style.display ="none";
+	document.getElementById("stop").disabled = true;
+
 
 
 }

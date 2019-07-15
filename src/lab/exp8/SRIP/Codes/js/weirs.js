@@ -1,19 +1,19 @@
 //Script file for simulaton of weirs one after another
-//var cl;
+
 function display_Vweir(){
 
 	experiment();
 	setTimeout(vernierWithScale,1000);// in experiment.js
 	setTimeout(drawBaffel ,2000);
-	setTimeout(weirV,3000);
-	//water flow
-	setTimeout(drawFlow,5000);
-	setTimeout(drawFlowWater,8000);
-	setTimeout(drawcylwater,10000);
-	setTimeout(observeReadings,13000);
+	setTimeout(weirV,4000);
+	//water flow in water.js
+	setTimeout(drawFlow,6000);
+	setTimeout(drawFlowWater,9000);
+	setTimeout(drawcylwater,11000);//10
+	setTimeout(observeReadings,13000);//13
 
 	//rectangular weir
-	setTimeout(display_Rweir,15000);
+	setTimeout(display_Rweir,16000);
 
 }
 
@@ -24,14 +24,14 @@ function display_Rweir(){
 	experiment();
 	setTimeout(vernierWithScale ,1000);
 	setTimeout(drawBaffel ,2000);
-	setTimeout(weirR,3000);
-	setTimeout(drawFlow,5000);
-	setTimeout(drawFlowWater,9000);
-	setTimeout(drawcylwater,11000);
-	setTimeout(observeReadings,14000);
+	setTimeout(weirR,4000);
+	setTimeout(drawFlow,6000);
+	setTimeout(drawFlowWater,10000);
+	setTimeout(drawcylwater,12000);
+	setTimeout(observeReadings,15000);
 		
 	//edge weir
-	setTimeout(display_Eweir,16000);
+	setTimeout(display_Eweir,17000);
 
 }
 
@@ -41,12 +41,12 @@ function display_Eweir(){
     experiment();
     setTimeout(vernierWithScale ,1000);
 	setTimeout(drawBaffel ,2000);
-    setTimeout(weirE,3000);
-    setTimeout(drawFlow,4000);
-	setTimeout(drawFlowWaterE,8000);
-	setTimeout(drawcylwater,10000);
-	setTimeout(observeReadings,13000);
-	setTimeout(simulatonComplete,15000);
+    setTimeout(weirE,4000);
+    setTimeout(drawFlow,5000);
+	setTimeout(drawFlowWaterE,9000);
+	setTimeout(drawcylwater,11000);
+	setTimeout(observeReadings,14000);
+	setTimeout(simulatonComplete,17000);
     
 }
 
@@ -158,6 +158,7 @@ function observeReadings(argument) {
 function simulatonComplete(argument) {
 	
 	document.getElementById("note").innerHTML = "simulaton completed use restart button to observe again";
-	document.getElementById("stop").style.display="none";
+	document.getElementById("stop").disabled = true;
+
 
 }
