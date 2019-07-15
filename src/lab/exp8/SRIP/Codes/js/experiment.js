@@ -2,12 +2,18 @@
   
 function experiment() {
 
+
+
     document.getElementById("shapes").style.display = "inline-block";
     document.getElementById("start").style.display = "none";
     document.getElementById("stop").style.display = "inline-block";
 
     document.getElementById("note").style.display = "inline-block";
     document.getElementById("note").innerHTML = "hydralic bench";
+
+
+    var elem = document.getElementById("water");   
+    elem.style.display="none";
 
     var c = document.getElementById("myCanvas");
 

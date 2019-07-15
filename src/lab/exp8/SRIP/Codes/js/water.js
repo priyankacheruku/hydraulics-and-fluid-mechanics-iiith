@@ -1,5 +1,5 @@
 var i=0;
-function drawFlow() {
+/*function drawFlow() {
 
   document.getElementById("note").innerHTML = "Supply water through pump";
 
@@ -38,7 +38,7 @@ function drawFlow() {
 	}
 	
 }	
-
+*/
 
 function drawcylwater(argument) {
   var c = document.getElementById("myCanvas");
@@ -184,3 +184,25 @@ function lerp(v0, v1, t) {
     return ( 1.0 - t ) * v0 + t * v1;
 }
 
+function drawFlow(argument) {
+
+  var elem = document.getElementById("water");  
+  elem.style.height="0px";
+  elem.style.top="165px";
+  elem.style.display="block";
+  var t = 165;
+  var h=0;
+  var id = setInterval(frame,70);
+  function frame() {
+    if (t == 105 || h==60) {
+      clearInterval(id);
+    }
+    else {
+      t--; 
+      h++; 
+      elem.style.top = t + 'px';
+      elem.style.height = h + 'px'; 
+      
+    }
+  }
+}

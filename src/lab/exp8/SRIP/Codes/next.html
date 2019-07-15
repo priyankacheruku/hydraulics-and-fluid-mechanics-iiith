@@ -52,7 +52,7 @@
 			Next
 		</button>
 		
-		<button class="btn" name="restart" onclick="window.location.reload();" >
+		<button class="btn" name="restart" onclick="window.location.='experiment.html';" >
 			<img src="images/restart.png">
 			Restart
 		</button>
@@ -84,7 +84,10 @@
 			</div>
 		</div>
 
-		<div class="experiment">	<canvas id="myCanvas" width=800 height="325" ></canvas></div>
+		<div class="experiment">	
+			<canvas id="myCanvas" width=800 height="325" ></canvas>
+			<div class="water" id="water"></div>
+		</div>
 		<center><div class="note" id="note"></div>	</center>
 	
 	</div><!--scene class-->
@@ -104,7 +107,7 @@
 
 		<button class="btn" name="graph" onclick="window.open('graph.html',
 			'popUpWindow',
-			'height=500,width=500,left=300,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
+			'height=350,width=500,left=300,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
 			<img src="images/graph_window.png">
 			Full View Graph
 		</button>
@@ -144,7 +147,7 @@
 		</div>
 		<div>
 				<p id="q_value"><p>
-				<div id="Result"></div>
+					<center><div id="Result"></div></center>
 		</div>
 	</div>
 <!-------------------------------------------input paramerters division closed ---------------------------->

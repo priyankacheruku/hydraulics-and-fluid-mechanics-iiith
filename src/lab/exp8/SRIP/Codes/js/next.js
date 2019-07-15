@@ -42,7 +42,7 @@ function displayWater(argument) {
 	cyl.fill();
 
 	cyl.beginPath();
-	cyl.rect(445,245,90,52); //to display blue in cylinder
+	cyl.rect(445,245,90,52); //to display water in cylinder
 	cyl.fillStyle= "#1ca3ec";
 	cyl.fill();
 	cyl.restore();
@@ -52,7 +52,7 @@ function displayWater(argument) {
 	rctx.save();
 	rctx.rotate(4* Math.PI / 180);
 	rctx.beginPath();
-	rctx.rect(35,90, 325, 60);//water
+	rctx.rect(35,90, 325, 60);//water in cantainer
 	rctx.fillStyle = "#1ca3ec";
 	rctx.fill();
 	rctx.restore();
