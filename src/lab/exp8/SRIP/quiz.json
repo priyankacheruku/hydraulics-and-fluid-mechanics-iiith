@@ -1,0 +1,258 @@
+{
+    "artciles": [
+        {
+            "quiztitle":"Quiz for Experiment",
+            "containers":"5"
+        },
+        {
+            "q": "What is weir?",
+            "option": [
+                "Thin  particle",
+                "a low dam built across a river",
+                "stream of water"
+            ],
+            "answer": "a low dam built across a river",
+            "description": ""
+        },
+        {
+            "q": "find the odd one",
+            "option": [
+                "Rectangular weir",
+                "Triangular weir",
+                "Narrow-crested weir"
+            ],
+            "answer": "Narrow-crested weir",
+            "description": ""
+        },
+        {
+            "q": "How are the weirs classified?",
+            "option": [
+                "Based on color",
+                "based on shape",
+                "based on height"
+            ],
+            "answer": "based on shape",
+            "description": ""
+        },
+        {
+            "q": "Where is broad crested weir is used?",
+            "option": [
+                "to measure open channel flow rate",
+                "to measure open channel length",
+                " a and b"
+            ],
+            "answer": "to measure open channel flow rate",
+            "description": ""
+        },
+        {
+            "q": "Does the magnitude of the flow rate affect the discharge coefficient Cod?",
+            "option": [
+                "True",
+                "false",
+                "cannot be determined"
+            ],
+            "answer": "True",
+            "description": ""
+        },
+        {
+            "q": "Cod will ________ with increasing flow rate",
+            "option": [
+                "increase",
+                "decrease",
+                "constant"
+            ],
+            "answer": "increase",
+            "description": ""
+        },
+        {
+            "q": "find the odd ?",
+            "option": [
+                "Broad- crested weir",
+                "Narrow-crested weir",
+                "Ogee-shaped weir"
+            ],
+            "answer": "Ogee-shaped weir",
+            "description": ""
+        },
+        {
+            "q": "Would you expect the length of the weir crest to affect the discharge coefficient Cod?",
+            "option": [
+                "True",
+                "false",
+                "depends on area"
+            ],
+            "answer": "True",
+            "description": ""
+        },
+        {
+            "q": "Not  a advantage of using weirs",
+            "option": [
+                "easy to verify",
+                "It is simple in design",
+                "It affects local fauna."
+            ],
+            "answer": "It affects local fauna.",
+            "description": "It affects local fauna."
+        },
+        {
+            "q": "How many types of weirs are there based on the shape of the crest?",
+            "option": [
+                "1",
+                "2",
+                "4"
+            ],
+            "answer": "4",
+            "description": "The four types are sharp-crested, broad-crested, narrow-crested and ogee-shaped weir."
+        },
+        {
+            "q": "_________ weir comprises several designs into one structure.",
+            "option": [
+                "Compound",
+                "Mixed",
+                "Open"
+            ],
+            "answer": "Compound",
+            "description": " Compound weirs are commonly seen in locations where a river has multiple users who may need to bypass the structure. Common design includes a broad-crested weir."
+        },
+        {
+            "q": "Triangular weir is also called:",
+            "option": [
+                "Ogee",
+                " V-notch",
+                "Isolated"
+            ],
+            "answer": "V-notch",
+            "description": "Triangular weir is shaped like a reverse triangle that is the shape of V. Hence, it is also called V-notch weir. These can be used to measure discharge over small flows with greater accuracy."
+        },
+        {
+            "q": "Head loss will be small in case of:",
+            "option": [
+                " Ogee shaped",
+                "Broad crested",
+                "Narrow crested"
+            ],
+            "answer": "Broad crested",
+            "description": "Broad crested weirs are constructed in rectangular shape only and are suitable for larger flows. Hence, head loss is less."
+        },
+        {
+            "q": "in trapezoidal weir, sides are inclined outward with a slope of:",
+            "option": [
+                " 1:4",
+                "1:2",
+                "1:3"
+            ],
+            "answer": " 1:4",
+            "description": "In trapezoidal weir, the sides are sloping outward at a specific inclination of 1:4 (horizontal: vertical). It is a modification of rectangular weir with slightly higher capacity."
+        },
+        {
+            "q": "Weirs are normally used to calculate:",
+            "option": [
+                " Volume",
+                " Head loss",
+                "Discharge"
+            ],
+            "answer": "Discharge",
+            "description": "Discharge or flow rate is measured and calculated by analysing a weir. It is given by Q=CLHn, where C is flow coefficient, L is width of crest, H is height of head, n is different for different structures."
+        },
+        {
+            "q": " ________ is the standard shape of a weir.",
+            "option": [
+                "Rectangular",
+                "Square",
+                "Triangular"
+            ],
+            "answer": "Rectangular",
+            "description": "Rectangular is the standard shape of a weir. Triangular and trapezoidal weirs are modifications of it. They are generally suitable for larger flowing channels."
+        },
+        {
+            "q": "Cippoletti weir has ___________ slope:",
+            "option": [
+                "Different",
+                "Proportionate",
+                "Equal"
+            ],
+            "answer": "Equal",
+            "description": "Cippoletti weir is a special case of a trapezoidal weir. In this, the side slope on either sides are equal. So, trapezoid can be divided into rectangular and triangular portion and hence analysed easily."
+        },
+        {
+            "q": " The overflowing sheet of water is called:",
+            "option": [
+                "Head",
+                "Nappe",
+                "Upstream"
+            ],
+            "answer": "Nappe",
+            "description": "Nappe represents the overflowing sheet of water. If it discharges into air, it is free discharge. If discharge is partly under water, it is submerged/drowned discharge."
+        },
+        {
+            "q": "For a discharge of triangular weirs with notch angle __________ the formula is 0.685 h2.45.",
+            "option": [
+                "90 degree",
+                "60 degree",
+                "30 degree"
+            ],
+            "answer": "30 degree",
+            "description": "or 30o angle, the formula is 0.685 h2.45. For 60o angle, it is 1.45 h2.47 and for 90o angle, it is 2.49 h2.48."
+        },
+        {
+            "q": "Which of the below is suitable for soft sandy foundation?",
+            "option": [
+                "Dry stone slope weir",
+                "Vertical drop weir",
+                "Masonry slope weir"
+            ],
+            "answer": "Masonry slope weir",
+            "description": "Masonry or concrete slope weir is the one suitable for soft sandy foundation. It is used where difference in weir crest and downstream river is limited to 3m."
+        },
+        {
+            "q": "Weirs can be used to power water wheels and power sawmills.",
+            "option": [
+                "True",
+                "False",
+                "cannot be determined"
+            ],
+            "answer": "True",
+            "description": "Mill ponds are created by a weir. It impounds water and then it flows over the structure. The energy created by this change in height of the water is used to power watermills and sawmills."
+        },
+        {
+            "q": "Trapezoidal weir has another popular name. What is it?",
+            "option": [
+                "Cipolletti weir",
+                "Option 2",
+                "Option 3"
+            ],
+            "answer": "Cipolletti weir",
+            "description": "Trapezoidal weir is also called Cipolletti weir."
+        },
+        {
+            "q": "baffel used for to allow  __________ flow of water",
+            "option": [
+                "Laminar",
+                "Paralle",
+                "Tangential"
+            ],
+            "answer": "Laminar",
+            "description": ""
+        },
+        {
+            "q": "The weir is an attachable structure made up of thermoplastic.",
+            "option": [
+                "True",
+                "False",
+                "Depends on requirement"
+            ],
+            "answer": "True",
+            "description": ""
+        },
+        {
+            "q": "The notch is bigger in size than wier",
+            "option": [
+                "True",
+                "False",
+                "Can't be determined"
+            ],
+            "answer": "False",
+            "description": "The weir is bigger in size than notch."
+        }
+    ]
+}
